@@ -38,6 +38,14 @@
         h3{
             font-size: 40px;
         }
+        /* descendant selector  */
+        div p span {
+            color: rgb(107, 251, 143);
+        }
+        /* children selector */
+        div>p>span{
+            color:aquamarine;
+        }
     </style>
 </head>
 <body>
@@ -65,7 +73,7 @@
      <!-- ID selectors -->
 
      <h1>ID Selectors</h1>
-     <p class="textcolor largetext" id="unique"> Para 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nulla, vel iure sint nemo quis quibusdam accusamus similique. Eligendi rem praesentium temporibus expedita officiis eum modi fuga dolorem non vero?</p>
+     <p class="textcolor largetext" id="unique" > Para 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nulla, vel iure sint nemo quis quibusdam accusamus similique. Eligendi rem praesentium temporibus expedita officiis eum modi fuga dolorem non vero?</p>
 
      <p class="largetext"> Para 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolore numquam quidem officia! Possimus repellat nam eligendi veritatis vero quas cumque dolorem fugiat, iure omnis autem nisi veniam placeat cupiditate?</p>
 
@@ -73,13 +81,28 @@
 
      <!-- Grouping selector -->
 
-     <h4>i am H1</h1>
+     <h4>i am H1</h4>
 
      <a href="http://nados.io" target="_blank">NADOS</a>
 
-     <h3>i am h3 <h3>
+     <h3>i am h3 </h3>
 
+    <!-- Combinators selector -->
+        <!-- Descendant Selector -->
 
+        <div>
+            <p> <!--  descendant and child of div -->
+                <span>I am a direct child</span> <!--descendant of div but not a child of div  child of p-->
+            </p>
+        </div>
+
+        <div>
+            <span>
+                <p>
+                    <span>I am an indirect child</span>
+                 </p>
+            </span>
+        </div>
 
 </body>
 </html>
