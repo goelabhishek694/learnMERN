@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Selectors</title>
     <style>
+        /* Universal Selector */
+        *{
+            background-color: black;
+        }
         div{
             color:red;
             font-size: 40px;
@@ -19,8 +23,20 @@
         .largetext{
             font-size: 30px;
         }
-        .textcolor.largetext{
+        /* .textcolor.largetext{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        } */
+        #unique{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h4 , a, h3{
+            color: lightgreen;
+        }
+        /* a{
+            color: lightgreen;
+        } */
+        h3{
+            font-size: 40px;
         }
     </style>
 </head>
@@ -45,6 +61,23 @@
      <p class="largetext"> Para 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolore numquam quidem officia! Possimus repellat nam eligendi veritatis vero quas cumque dolorem fugiat, iure omnis autem nisi veniam placeat cupiditate?</p>
 
      <p class="textcolor"> Para 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolore numquam quidem officia! Possimus repellat nam eligendi veritatis vero quas cumque dolorem fugiat, iure omnis autem nisi veniam placeat cupiditate?</p>
+
+     <!-- ID selectors -->
+
+     <h1>ID Selectors</h1>
+     <p class="textcolor largetext" id="unique"> Para 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nulla, vel iure sint nemo quis quibusdam accusamus similique. Eligendi rem praesentium temporibus expedita officiis eum modi fuga dolorem non vero?</p>
+
+     <p class="largetext"> Para 2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolore numquam quidem officia! Possimus repellat nam eligendi veritatis vero quas cumque dolorem fugiat, iure omnis autem nisi veniam placeat cupiditate?</p>
+
+     <p class="textcolor"> Para 3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolore numquam quidem officia! Possimus repellat nam eligendi veritatis vero quas cumque dolorem fugiat, iure omnis autem nisi veniam placeat cupiditate?</p>
+
+     <!-- Grouping selector -->
+
+     <h4>i am H1</h1>
+
+     <a href="http://nados.io" target="_blank">NADOS</a>
+
+     <h3>i am h3 <h3>
 
 
 
