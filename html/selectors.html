@@ -29,7 +29,7 @@
         #unique{
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-        h4 , a, h3{
+        h4 , h3{
             color: lightgreen;
         }
         /* a{
@@ -45,6 +45,10 @@
         /* children selector */
         div>p>span{
             color:aquamarine;
+        }
+        /* attribute selector */
+        a[href="http://nados.io"]{
+            color:lightcoral
         }
     </style>
 </head>
@@ -103,6 +107,11 @@
                  </p>
             </span>
         </div>
+    
+    <!-- Attribute selector -->
+    <a href="http://nados.io" target="_blank">NADOS</a>
+    <a href="http://google.in">Google</a>
+    <a href="http://netflix.com" target="_blank">Netflix</a>
 
 </body>
 </html>
