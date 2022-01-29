@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .main>div{
+            width: 200px;
+            background-color: yellowgreen;
+            padding: 10px;
+            margin:20px;
+
+        }
+        .main{
+            display: flex;
+            flex-direction:row; 
+            /* default option */
+            flex-wrap:wrap;
+            /* default is no wrap */
+            justify-content:space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Seven</div>
+        <div>Eight</div>
+        <div>Nine</div>
+        <div>Ten</div>
+        <div>Eleven</div>
+        <div>Twelve</div>
+    </div>
+</body>
+</html>
