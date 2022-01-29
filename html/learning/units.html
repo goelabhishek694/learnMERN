@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html{
+        /* html{
             font-size:30px;
-        }
+        } */
         .parent{
             font-size: 35px; 
             /* 1em =35px */
@@ -30,6 +30,13 @@
             width:10rem;  
             /* 160px will be width */
         }
+        .ems li{
+            font-size: 1.5em;
+        }
+        .rems li{
+            font-size: 1.5rem; 
+            /* 1.5*16px=24px */
+        }
         
     </style>
 </head>
@@ -43,5 +50,39 @@
         </div>
         <div class="box rem">I am 10rem wide</div>
     </div>
+
+    <!-- difference b/w rem and em -->
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three a</li>
+                <li>Three b
+                    <ul>
+                        <li>Three b a</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="ems">
+        <!-- 1.5*16=24px -->
+        <li>One</li>
+        <li>Two</li> 
+        <li>Three
+            <!-- 1.5*16=24px *1.5=36px -->
+            <ul>
+                <li>Three a</li>
+                <li>Three b
+                    <!-- 1.5*16=24px *1.5=36px*1.5=54px -->
+                    <ul>
+                        <li>Three b a</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </body>
 </html>
