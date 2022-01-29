@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size:30px;
+        }
+        .parent{
+            font-size: 35px; 
+            /* 1em =35px */
+        }
+        .box{
+            background-color: aquamarine;
+            margin: 10px;
+        }
+        .px{
+            width: 200px;
+        }
+        .vw{
+            width:30vw;
+        }
+        .em{
+            width:10em;
+        }
+        .rem{
+            width:10rem;  
+            /* 160px will be width */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class=" box px">i am 200px wide Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, deleniti. Amet modi consectetur aut iure, nobis officia iste accusamus odio fugit commodi consequuntur aperiam soluta! Quaerat vitae iste doloribus dolore?</div>
+        <div class="box vw">I am 10vw wide</div>
+        <div class="parent">
+        <div class="box em ">i am 10em wide </div>
+
+        </div>
+        <div class="box rem">I am 10rem wide</div>
+    </div>
+</body>
+</html>

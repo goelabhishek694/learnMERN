@@ -1,10 +1,20 @@
 li{
     list-style: none;
 }
+.navbar>nav{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
 
-.welcomeImage>img{
+}
+img[src="images/lap.jpeg"]{
     height:800px;
     width: 1400px;
+}
+.skills {
+    display: flex;
 }
 
 .footer{
