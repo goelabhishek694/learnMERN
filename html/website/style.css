@@ -1,6 +1,11 @@
+h1{
+    margin-left: 3rem;
+}
 li{
     list-style: none;
+    margin-left:2rem;
 }
+
 .navbar>nav{
     display: flex;
     justify-content: space-between;
@@ -10,17 +15,23 @@ ul{
 
 }
 img[src="images/lap.jpeg"]{
-    height:800px;
-    width: 1400px;
+    height:100vh;
+    width: 95vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 .skills {
     display: flex;
 }
+.skills>div{
+    text-align: center;
+    margin-top: 2rem;
+}
 
 .footer{
-    height: 80px;
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 .footer>p{
