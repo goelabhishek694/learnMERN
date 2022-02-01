@@ -1,3 +1,8 @@
+html{
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+}
+
 h1{
     margin-left: 3rem;
     font-weight: 400;
@@ -55,6 +60,6 @@ a:hover{
     color: lightpink;
 }
 a{
-    text-decoration: none;
+    text-decoration:none;
 }
 
