@@ -49,6 +49,7 @@ able grasp the concepts`;
 console.log(b);
 
 var num = 4500;
+// ${}
 console.log(`half of ${num} is ${num / 2}`);
 
 
