@@ -50,8 +50,14 @@ let sayHi=function () {
     console.log("hello guys is am function expression");
 }
 
-console.log("line 54\n" + sayHi);
+let sayBye = function () {
+  console.log("bye guys");
+};
+
+console.log("line 57\n" + sayHi);
 sayHi();
+console.log("line 59\n" + sayBye);
+sayBye();
 //abcd(); // error abcd is not defined
 
 
