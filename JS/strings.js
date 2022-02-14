@@ -6,6 +6,11 @@ var str = "Hello pepcoders";
 console.log(str);
 
 console.log(str[4]);
+
+// strings in js are immutable
+str[4] = "z";  
+console.log(str);
+
 console.log(str.length);
 
 // string methods 
@@ -55,7 +60,7 @@ console.log(concatenatedStr);
 let concatStr = firstStr.concat(secondStr, " and me");
 console.log(concatStr);
 
-// trim method -> remove all the whitespaces of starting and ending of a string 
+// trim method -> removes all the whitespaces of starting and ending of a string 
 
 let trimStr = "                                     Hello       how are you                 ";
 console.log(trimStr);
