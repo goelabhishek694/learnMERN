@@ -70,6 +70,13 @@ console.log(trimStr.trim());
 console.log(trimStr.trim().length);
 
 
+// 2, 10, 13, 14, 16, 26 27, 28, 29, 32, 52, 61, 67,69, 82, 
+//     functionWithArgs
+// global scope and functions
+//     Escaping literal quotes
+//     Modify array with indexes
+//     Find the length of string
+//     word blanks
 
 
 
