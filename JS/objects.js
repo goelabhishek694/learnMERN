@@ -57,6 +57,14 @@ for (let haathi in captainAmerica) {
     console.log(captainAmerica[haathi]); //bracket notation usage
 }
 
+console.log(typeof captainAmerica.friends);
+
+//deleteing the key of an object
+delete captainAmerica.lastName;
+console.log(captainAmerica.lastName);
+
+
+
 // str{
 //     length: // 
 //     toUpperCase: function() {
