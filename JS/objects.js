@@ -40,7 +40,15 @@ let captainAmerica = {
 console.log(captainAmerica);
 console.log(captainAmerica.friends);
 console.log(captainAmerica.friends[0]);
-console.log(captainAmerica.sayHi()); //method accessing 
+captainAmerica.sayHi(); //method accessing 
+
+str{
+    length: // 
+    toUpperCase: function() {
+        
+        for()
+    }
+}
 
 
 
