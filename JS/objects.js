@@ -40,8 +40,11 @@ let captainAmerica = {
 
 console.log(captainAmerica);
 console.log(captainAmerica.friends);
-console.log(captainAmerica.friends[0]);
+console.log(captainAmerica.friends[0]); 
+console.log("printed using bracket notation "+captainAmerica["friends"][0]);
 captainAmerica.sayHi(); //method accessing 
+//nested objects 
+console.log(captainAmerica.address.city); 
 
 //for loop 
 // in keyword in JS is used to get keys from that object
@@ -54,8 +57,6 @@ for (let haathi in captainAmerica) {
     console.log(captainAmerica[haathi]); //bracket notation usage
 }
 
-
-
 // str{
 //     length: // 
 //     toUpperCase: function() {
@@ -65,7 +66,15 @@ for (let haathi in captainAmerica) {
 // }
 
 
+let car = {
+    name: "Ferrari",
+    model: 2022,
+    startEngine: function () {
+        console.log(`Starting the engine of the car ${this.name}`)
+    }
+}
 
+car.startEngine();
 
 
 // methods-> objects ke andar function
