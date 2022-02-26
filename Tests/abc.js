@@ -269,7 +269,7 @@
 // function nums(a, b) {
 //   if (a > b) console.log("a is bigger");
 //   else console.log("b is bigger");
-//   return
+//   return // return statement ke baad waala line execute nhi hta 
 //   a + b;
 // }
 
