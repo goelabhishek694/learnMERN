@@ -29,7 +29,6 @@ for (let i = 0; i < filesArr.length; i++){
     if (!doesExist) {
         console.log("One or more File(s) do not exist ");
         return;
-        // break;
     }
 }
 
@@ -43,4 +42,27 @@ for (let i = 0; i < filesArr.length; i++){
 console.log(content);
 
 let contentArr = content.split("\n");
-console.log(contentArr);
+console.table(contentArr);
+
+//check if -s is present or not
+let isSPresent = optionsArr.includes("-s");
+if (isSPresent) {
+    for (let i = 1; i < contentArr.length; i++){
+        if (contentArr[i] == "" && contentArr[i - 1] == "") {
+            contentArr[i] = null;
+        }
+        else if (contentArr[i] == "" && contentArr[i - 1] == null) {
+            contentArr[i] = null;
+        }
+    }
+    console.table(contentArr);
+    let tempArr = [];
+    //push everything in tempArr except null
+    for (let i = 0; i < contentArr.length; i++){
+        if (contentArr[i] != null) {
+            tempArr.push(contentArr[i]);
+        }
+    }
+    console.log("data after removing extra lines\n",tempArr);
+}
+
