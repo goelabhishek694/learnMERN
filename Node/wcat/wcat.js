@@ -7,7 +7,7 @@ const fs = require("fs");
 // let input = process.argv;
 // console.log(input);
 let inputArr = process.argv.slice(2);
-console.log(inputArr);
+// console.log(inputArr);
 let filesArr = [];
 let optionsArr = [];
 //===============> placed files path in filesArr <=============
@@ -40,10 +40,10 @@ for (let i = 0; i < filesArr.length; i++){
     content = content + fileContent + "\n";  // "\r\n" for windows laptop
                      
 }
-console.log(content);
+// console.log(content);
 
 let contentArr = content.split("\n"); // "\r\n" for windows laptop
-console.table(contentArr);
+// console.table(contentArr);
 
 //check if -s is present or not
 let tempArr = [];
@@ -57,7 +57,7 @@ if (isSPresent) {
             contentArr[i] = null;
         }
     }
-    console.table(contentArr);
+    // console.table(contentArr);
     
     //push everything in tempArr except null
     for (let i = 0; i < contentArr.length; i++){
@@ -65,7 +65,7 @@ if (isSPresent) {
             tempArr.push(contentArr[i]);
         }
     }
-    console.log("data after removing extra lines\n",tempArr);
+    // console.log("data after removing extra lines\n",tempArr);
 }
 
 contentArr = tempArr;
@@ -108,9 +108,6 @@ function modifiyContentByN() {
     }
 }
 
-
-console.log(contentArr);
-
 function modifiyContentByB() {
     let count = 1;
     for (let i = 0; i < contentArr.length; i++) {
@@ -122,5 +119,5 @@ function modifiyContentByB() {
 }
 
 
-
+console.log(contentArr);
 
