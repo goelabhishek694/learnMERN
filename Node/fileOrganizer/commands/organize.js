@@ -35,6 +35,7 @@ function organize(srcPath) {
   //4.trvaerse over all the files and classify them on the basis of their extension (.pdf , .mp3)
     for (let i = 0; i < allFiles.length; i++){
         // let ext = allFiles[i].split(".")[1];
+        //extname returns the extension of the file 
         let ext = path.extname(allFiles[i]);
         console.log(ext);
     }
