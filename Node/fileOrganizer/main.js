@@ -2,6 +2,7 @@
 let helpFunc = require("./commands/help");
 // console.log(helpFunc.ghoda());
 let inputArr = process.argv.slice(2);
+// console.log(inputArr);
 let command = inputArr[0];
 let path = inputArr[1];
 switch (command) { //organizee
