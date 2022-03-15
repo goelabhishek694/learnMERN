@@ -37,7 +37,7 @@ function organize(srcPath) {
       // let ext = allFiles[i].;
       //extname returns the extension of the file
       let fullPathOfFile = path.join(srcPath, allFiles[i]);
-      // console.log(fullPathOfFile);
+      console.log(fullPathOfFile);
       //1. check if it is a file or folder
       //lstatsync gives the information regarding the link provided ,
       let isFile = fs.lstatSync(fullPathOfFile).isFile(); //true-> file hai to  or false-> agar folder h 
@@ -48,6 +48,7 @@ function organize(srcPath) {
         // console.log(ext);
         //1.2 get folder name from extension
         let folderName = getFolderName(ext); //archives 
+        // console.log(folderName);
         //1.3 copy from src folder (srcPath) and paste in dest folder (folder_name e.g. document, media etc)
                     //copy      kya copy kro    paste 
         copyFileToDest(srcPath, fullPathOfFile, folderName);
@@ -55,15 +56,35 @@ function organize(srcPath) {
     }
 }
 
-function getFolderName(srcPath) {
-  
-  //magic 
-  return folderName;
+function getFolderName(ext) {
+  //magic
+  for (let key in types) {
+    // console.log(key);
+    for (let i = 0; i < types[key].length; i++) {
+      if (types[key][i] == ext) {
+        return key;
+      }
+    }
+  }
 }
 
 function copyFileToDest(srcPath, fullPathOfFile, folderName) {
-  
-  //magic 
+  //1. folderName ka path banana h
+  let destFolderPath = path.join(srcPath, "organized_files", folderName); //....../downloads/organized_files/archives
+  // console.log(des);
+  //2 check folder if exists, if it does not, then make folder
+
+  if (!fs.existsSync(destFolderPath)) {
+    fs.mkdirSync(destFolderPath);
+  }
+  //3. copy file from src folder to dest folder
+
+  // Returns the last portion of a path
+  let fileName = path.basename(fullPathOfFile); //abc.zip
+  let destFileName = path.join(destFolderPath, fileName);    
+                      // src        dest
+  fs.copyFileSync(fullPathOfFile, destFileName);
+  //magic
 }
 
 
