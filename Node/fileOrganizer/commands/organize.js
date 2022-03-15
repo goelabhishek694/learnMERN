@@ -40,21 +40,22 @@ function organize(srcPath) {
       console.log(fullPathOfFile);
       //1. check if it is a file or folder
       //lstatsync gives the information regarding the link provided ,
-      let isFile = fs.lstatSync(fullPathOfFile).isFile(); //true-> file hai to  or false-> agar folder h 
-      console.log(allFiles[i]+" is "+ isFile);
-      if (isFile) {
+      let isThisAFile = fs.lstatSync(fullPathOfFile).isFile(); //true-> file hai to  or false-> agar folder h 
+      console.log(allFiles[i] + " is " + isThisAFile);
+      if (isThisAFile) {
         //1.1 get ext name
         let ext = path.extname(allFiles[i]).split(".")[1];
         // console.log(ext);
         //1.2 get folder name from extension
-        let folderName = getFolderName(ext); //archives 
+        let folderName = getFolderName(ext); //archives
         // console.log(folderName);
         //1.3 copy from src folder (srcPath) and paste in dest folder (folder_name e.g. document, media etc)
-                    //copy      kya copy kro    paste 
+                        //copy      kya copy kro    paste
         copyFileToDest(srcPath, fullPathOfFile, folderName);
       }
     }
 }
+
 
 function getFolderName(ext) {
   //magic
@@ -66,6 +67,7 @@ function getFolderName(ext) {
       }
     }
   }
+  return "miscellaneous"
 }
 
 function copyFileToDest(srcPath, fullPathOfFile, folderName) {
@@ -88,6 +90,10 @@ function copyFileToDest(srcPath, fullPathOfFile, folderName) {
 }
 
 
-let srcPath="/Users/abhishekgoel/Desktop/Desktop/AbhishekGoel/FJP5/Node/fileOrganizer/downloads"
-organize(srcPath);
+// let srcPath="/Users/abhishekgoel/Desktop/Desktop/AbhishekGoel/FJP5/Node/fileOrganizer/downloads"
+// organize(srcPath);
+
+module.exports = {
+  organize:organize
+}
 
