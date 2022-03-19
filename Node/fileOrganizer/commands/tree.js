@@ -6,11 +6,10 @@ function treeFn(dirPath) {
   if (dirPath == undefined) {
     console.log("Please Enter a Valid Path");
     return;
-  } else {
-    let doesExist = fs.existsSync(dirPath);
-    if (doesExist == true) {
-      treeHelper(dirPath, " ");
-    }
+  }
+  let doesExist = fs.existsSync(dirPath);
+  if (doesExist == true) {
+    treeHelper(dirPath, " ");
   }
 }
 
@@ -34,7 +33,7 @@ function treeHelper(targetPath, indent) {
 }
 
 module.exports = {
-  tree: tree,
+  tree: treeFn,
 };
 
 // let srcPath="/Users/abhishekgoel/Desktop/Desktop/AbhishekGoel/FJP5/Node/"
