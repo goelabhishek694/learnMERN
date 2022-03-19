@@ -94,6 +94,6 @@ function copyFileToDest(srcPath, fullPathOfFile, folderName) {
 // organize(srcPath);
 
 module.exports = {
-  organize:organize
+  organizeFnKey:organize
 }
 
