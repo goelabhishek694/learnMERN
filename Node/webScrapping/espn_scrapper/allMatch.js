@@ -1,5 +1,6 @@
 const request = require("request");
 const cheerio = require("cheerio");
+// const getScorecardObj = require("./scorecards");
 const {gifs} = require("./scorecards");
 function getAllMatch(url) {
     // console.log("from allMatch.js ",url);
@@ -21,7 +22,9 @@ function extractAllMatchLink(html){
         let scorecardLink = selecTool(scorecardElemArr[i]).attr("href");
         // console.log(i + 1 + ") " + scorecardLink);
         let fullLink = "https://www.espncricinfo.com" + scorecardLink;
+        // getScorecardObj.gifs(fullLink);
         gifs(fullLink);
+        break;
 
     }
 }
