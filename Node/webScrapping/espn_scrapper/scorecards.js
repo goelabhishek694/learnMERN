@@ -66,8 +66,25 @@ function getMatchDetails(html) {
         // count++;
         // console.log("inside " + count);
         // name | runs | balls | 4's | 6's | sr
+        // for (let i = 0; i < 8; i++) {
+        //   if (i == 1 || i == 4) continue;
+        //   else {
+        //     console.log(selecTool(row.find("td")[i]).text());
+        //   }
+        // }
+        let playerName = selecTool(row.find("td")[0]);
+        console.log(playerName);
+        let runs = selecTool(row.find("td")[2]).text();
+        let balls = selecTool(row.find("td")[3]).text();
+        let numberOf4 = selecTool(row.find("td")[5]).text();
+        let numberOf6 = selecTool(row.find("td")[6]).text();
+        let sr = selecTool(row.find("td")[7]).text();
 
-        
+        console.log(
+          `playerName -> ${playerName} runsScored ->  ${runs} ballsPlayed ->  ${balls} numbOfFours -> ${numberOf4} numbOfSixes -> ${numberOf6}  strikeRate-> ${sr}`
+        );
+
+
       }
     }
   }
