@@ -72,8 +72,8 @@ function getMatchDetails(html) {
         //     console.log(selecTool(row.find("td")[i]).text());
         //   }
         // }
-        let playerName = selecTool(row.find("td")[0]);
-        console.log(playerName);
+        let playerName = selecTool(row.find("td")[0]).text();
+        // console.log(playerName);
         let runs = selecTool(row.find("td")[2]).text();
         let balls = selecTool(row.find("td")[3]).text();
         let numberOf4 = selecTool(row.find("td")[5]).text();
