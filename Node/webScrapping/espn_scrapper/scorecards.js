@@ -61,7 +61,14 @@ function getMatchDetails(html) {
     let allRows = selecTool(allBatsmenTable[i]).find("tr"); // -> data of batsmen + empty rows 
     
     for (let i = 0; i < allRows.length; i++) {
+        //check for team innings end
+        if ($(allRows[i]).hasClass("extras")) {
+      let temp = team1;
+      team1 = team2;
+      team2 = temp;
+    }
       //Check to see if any of the matched elements have the given className
+        
       let row = selecTool(allRows[i]);
       let firstColmnOfRow = row.find("td")[0];
       if (selecTool(firstColmnOfRow).hasClass("batsman-cell")) {
