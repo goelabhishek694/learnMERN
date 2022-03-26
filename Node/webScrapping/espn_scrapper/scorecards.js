@@ -44,10 +44,10 @@ function getMatchDetails(html) {
   //4. get team names
   let teamNameArr = selecTool(".name-detail>.name-link");
   // console.log(teamNames.text());
-  let team1 = selecTool(teamNameArr[0]).text();
-  let team2 = selecTool(teamNameArr[1]).text();
-  console.log(team1);
-  console.log(team2);
+  let ownTeam = selecTool(teamNameArr[0]).text();
+  let opponentTeam = selecTool(teamNameArr[1]).text();
+  console.log(ownTeam);
+  console.log(opponentTeam);
 
   //5. get innings 
 
@@ -75,7 +75,7 @@ function getMatchDetails(html) {
         //     console.log(selecTool(row.find("td")[i]).text());
         //   }
         // }
-        let playerName = selecTool(row.find("td")[0]).text();
+        let playerName = selecTool(row.find("td")[0]).text().trim();
         // console.log(playerName);
         let runs = selecTool(row.find("td")[2]).text();
         let balls = selecTool(row.find("td")[3]).text();
@@ -91,8 +91,9 @@ function getMatchDetails(html) {
           dateOfMatch,
           venueOfMatch,
           matchResult,
-          team1,
-          team2playerName,
+          ownTeam,
+          opponentTeam,
+          playerName,
           runs,
           balls,
           numberOf4,
@@ -103,8 +104,8 @@ function getMatchDetails(html) {
     }
   }
 
-  function processInformation(dateOfMatch,venueOfMatch,matchResult,team1,team2,playerName,runs,balls,numberOf4,numberOf6,sr) {
-    let teamNamePath = path.join(__dirname, "IPL", team1);
+  function processInformation(dateOfMatch,venueOfMatch,matchResult,ownTeam,opponentTeam,playerName,runs,balls,numberOf4,numberOf6,sr) {
+    let teamNamePath = path.join(__dirname, "IPL", ownTeam);
     if (!fs.existsSync(teamNamePath)) {
       fs.mkdirSync(teamNamePath);
     }
@@ -116,8 +117,8 @@ function getMatchDetails(html) {
       dateOfMatch,
       venueOfMatch,
       matchResult,
-      team1,
-      team2,
+      ownTeam,
+      opponentTeam,
       playerName,
       runs,
       balls,
@@ -127,17 +128,25 @@ function getMatchDetails(html) {
     };
 
     content.push(playerObj);
+    //this function writes all the content into excel sheet , and places that excel sheet data into playerPath-> rohitSharma.xlsx
     excelWriter(playerPath, content, playerName);
     
   }
     
   // console.log(htmlString);
 }
-
-function excelReader(playerPath, playerName) {
+//this function reads the data from excel file
+function excelReader(playerPath, sheetName) {
   if (!fs.existsSync(playerPath)) {
+    //if playerPath does not exists, this means that we have never placed any data into that file 
     return [];
   }
+  //if playerPath already has some data in it 
+  let workBook = xlsx.readFile(playerPath);
+  //A dictionary of the worksheets in the workbook. Use SheetNames to reference these.
+  let excelData = workBook.Sheets[sheetName];
+  let playerObj = xlsx.utils.sheet_to_json(excelData);
+  return playerObj;
 }
 
 function excelWriter(playerPath, jsObject, sheetName) {
