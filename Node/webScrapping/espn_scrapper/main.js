@@ -1,5 +1,6 @@
 let url = "https://www.espncricinfo.com/series/ipl-2020-21-1210595";
-
+const fs = require("fs");
+const path = require("path");
 const request = require("request");
 const cheerio = require("cheerio");
 const allMatchObj = require("./allMatch");
@@ -12,6 +13,13 @@ function cb(err, res, body) {
     handleHTML(body);
   }
 }
+
+// /Users/abhishekgoel/Desktop/Desktop/AbhishekGoel/FJP5/Node/webScrapping/espn_scrapper
+let iplPath = path.join(__dirname,"IPL");
+if (!fs.existsSync(iplPath)) {
+  fs.mkdirSync(iplPath);
+}
+
 
 function handleHTML(html){
     let selecTool = cheerio.load(html);
