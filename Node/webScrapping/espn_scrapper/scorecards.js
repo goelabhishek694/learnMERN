@@ -63,6 +63,11 @@ function getMatchDetails(html) {
     for (let i = 0; i < allRows.length; i++) {
       //Check to see if any of the matched elements have the given className
       let row = selecTool(allRows[i]);
+        if(row.hasClass("extras"){
+           let temp = ownTeam;
+           ownTeam = opponentTeam;
+           opponentTeam = temp;
+           }
       let firstColmnOfRow = row.find("td")[0];
       if (selecTool(firstColmnOfRow).hasClass("batsman-cell")) {
         //will be getting valid data
