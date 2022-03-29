@@ -7,6 +7,7 @@ const xlsx = require("xlsx");
 function getInfoFromScorecard(url) {
 //   console.log("from scorecards.js ",url);
     // we have a url of a scorecard, we want to get html of that scorecard
+  // console.log("request received "+count);
   request(url, cb);
 }
 
@@ -15,7 +16,11 @@ function cb(err,res,body) {
     if (err) {
         console.log(err);
     }
+    else if (res.statusCode == 404) {
+      console.log("Page not found");
+    }
     else {
+      // console.log("Page found");
         getMatchDetails(body);
     }
 }
@@ -46,22 +51,30 @@ function getMatchDetails(html) {
   // console.log(teamNames.text());
   let ownTeam = selecTool(teamNameArr[0]).text();
   let opponentTeam = selecTool(teamNameArr[1]).text();
-  console.log(ownTeam);
-  console.log(opponentTeam);
+  // console.log(ownTeam);
+  // console.log(opponentTeam);
 
   //5. get innings 
 
   let allBatsmenTable = selecTool(".table.batsman tbody");
-  console.log("number of batsmen tables are ->   ",allBatsmenTable.length);
-  let htmlString = "";
-  let count = 0;
+  // console.log("number of batsmen tables are ->   ",allBatsmenTable.length);
+  // let htmlString = "";
+  // let count = 0;
   for (let i = 0; i < allBatsmenTable.length; i++) {
-    htmlString = htmlString + selecTool(allBatsmenTable[i]).html();
+    // htmlString = htmlString + selecTool(allBatsmenTable[i]).html();
     //Get the descendants(table rows ) of each element (table )
     let allRows = selecTool(allBatsmenTable[i]).find("tr"); // -> data of batsmen + empty rows 
-    
+    // let temp ;
+    if (i == 1) {
+      let temp = ownTeam;
+      ownTeam = opponentTeam;
+      opponentTeam = temp;
+    }
+    console.log(ownTeam);
+    console.log(opponentTeam);
     for (let i = 0; i < allRows.length; i++) {
       //Check to see if any of the matched elements have the given className
+      
       let row = selecTool(allRows[i]);
       let firstColmnOfRow = row.find("td")[0];
       if (selecTool(firstColmnOfRow).hasClass("batsman-cell")) {
@@ -75,8 +88,19 @@ function getMatchDetails(html) {
         //     console.log(selecTool(row.find("td")[i]).text());
         //   }
         // }
-        let playerName = selecTool(row.find("td")[0]).text().trim();
-        // console.log(playerName);
+        let pn = selecTool(row.find("td")[0]).text().split("");
+        console.log(pn.join(""));
+        let playerName = "";
+        if (pn.includes('(')) {
+          playerName = pn.join("").split("(")[0];
+          // console.log(playerName);
+        }
+        else if (pn.includes('†')) {
+          playerName = pn.join("").split("†")[0];
+          // console.log(playerName);
+        }
+         else playerName = pn.join("");
+        //playerName = "hello"; //†
         let runs = selecTool(row.find("td")[2]).text();
         let balls = selecTool(row.find("td")[3]).text();
         let numberOf4 = selecTool(row.find("td")[5]).text();
@@ -100,6 +124,8 @@ function getMatchDetails(html) {
           numberOf6,
           sr
         );
+
+        console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
       }
     }
   }
@@ -160,12 +186,9 @@ function excelWriter(playerPath, jsObject, sheetName) {
   xlsx.writeFile(newWorkBook, playerPath);
 }
 
-
-
-
-
-
 //visit every scorecard and get info 
 module.exports = {
     gifs:getInfoFromScorecard
 }
+
+// playername ki jo html  h usko copy krke ek mini analysis 
