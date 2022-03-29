@@ -89,17 +89,17 @@ function getMatchDetails(html) {
         //   }
         // }
         let pn = selecTool(row.find("td")[0]).text().split("");
-        console.log(pn.join(""));
+        // console.log(pn);
+        // console.log(pn.join(""));
         let playerName = "";
-        if (pn.includes('(')) {
+        //Determines whether an array includes a certain element, returning true or false as appropriate.
+        if (pn.includes("(")) {
           playerName = pn.join("").split("(")[0];
           // console.log(playerName);
-        }
-        else if (pn.includes('†')) {
+        } else if (pn.includes("†")) {
           playerName = pn.join("").split("†")[0];
           // console.log(playerName);
-        }
-         else playerName = pn.join("");
+        } else playerName = pn.join("");
         //playerName = "hello"; //†
         let runs = selecTool(row.find("td")[2]).text();
         let balls = selecTool(row.find("td")[3]).text();
