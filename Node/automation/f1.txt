@@ -1,0 +1,1 @@
+That entity is converted to the char it represents when the browser renders the page. JS (jQuery) reads the rendered page, thus it will not encounter such a text sequence. The only way it could encounter such a thing is if you're double encoding entities.
