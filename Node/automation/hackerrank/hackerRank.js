@@ -4,7 +4,7 @@ let { email, password } = require('./secrets');
 // let password = "";
 
 let curTab;
-let browserOPenPromise = puppeteer.launch({
+let browserOpenPromise = puppeteer.launch({
   headless: false,
   defaultViewport: null,
   args: ["--start-maximized"],
@@ -12,9 +12,11 @@ let browserOPenPromise = puppeteer.launch({
   // executablePath:
   //   "//Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
 });
-browserOPenPromise //fulfill
+// console.log(browserOpenPromise);
+browserOpenPromise //fulfill
   .then(function (browser) {
     console.log("browser is open");
+    console.log(browserOpenPromise);
     // console.log(browser);
     //An array of all open pages inside the Browser.
     //returns an array with all the pages in all browser contexts
@@ -25,7 +27,9 @@ browserOPenPromise //fulfill
     curTab = allTabsArr[0];
     console.log("new tab");
     //URL to navigate page to
-    let visitingLoginPagePromise = curTab.goto("https://www.hackerrank.com/auth/login");
+    let visitingLoginPagePromise = curTab.goto(
+      "https://www.hackerrank.com/auth/login"
+    );
     return visitingLoginPagePromise;
   })
   .then(function (data) {
@@ -37,7 +41,10 @@ browserOPenPromise //fulfill
   })
   .then(function () {
     console.log("email is typed");
-    let passwordWillBeTypedPromise = curTab.type("input[type='password']", password);
+    let passwordWillBeTypedPromise = curTab.type(
+      "input[type='password']",
+      password
+    );
     return passwordWillBeTypedPromise;
   })
   .then(function () {
@@ -56,7 +63,31 @@ browserOPenPromise //fulfill
     return algorithmTabWillBeOPenedPromise;
   })
   .then(function () {
-    console.log("algorithm pages is opened");
+    console.log("algorithm page is opened");
+    let allQuesPromise = curTab.waitForSelector(
+      'a[data-analytics="ChallengeListChallengeName"]'
+    );
+    return allQuesPromise;
+  })
+  .then(function () {
+    function getAllQuesLinks() {
+      let allElemArr = document.querySelectorAll(
+        'a[data-analytics="ChallengeListChallengeName"]'
+      );
+      let linksArr = [];
+      for (let i = 0; i < allElemArr.length; i++) {
+        linksArr.push(allElemArr[i].getAttribute("href"));
+      }
+      return linksArr;
+    }
+
+    let linksArrPromise = curTab.evaluate(getAllQuesLinks);
+    return linksArrPromise;
+  })
+  .then(function (linksArr) {
+    console.log("links to all ques received");
+    console.log(linksArr);
+    //question solve krna h
   })
   .catch(function (err) {
     console.log(err);
@@ -72,15 +103,11 @@ function waitAndClick(algoBtn) {
       })
       .then(function () {
         console.log("algo btn is clicked");
-        // resolve();
+        resolve();
       })
       .catch(function (err) {
         console.log(err);
       })
   });
-
-  // waitClickPromise.then(function () {
-  //   console.log("inside then of waitclick");
-  // });
   return waitClickPromise;
 }
