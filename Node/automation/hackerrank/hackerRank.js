@@ -140,7 +140,7 @@ function questionSolver(url, idx) {
       })
       .then(function () {
         //control key is pressed promise
-        let controlPressedPromise = curTab.keyboard.press("Control");
+        let controlPressedPromise = curTab.keyboard.down("Control");
         return controlPressedPromise;
       })
       .then(function () {
