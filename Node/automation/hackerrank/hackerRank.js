@@ -5,9 +5,9 @@ let { email, password } = require('./secrets');
 let { answer } = require("./codes");
 let curTab;
 let browserOpenPromise = puppeteer.launch({
-  headless: false,
+  headless: false, 
   defaultViewport: null,
-  args: ["--start-maximized"],
+  args: ["--start-maximized"]
   //chrome://version/
   // executablePath:
   //   "//Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -20,7 +20,7 @@ browserOpenPromise //fulfill
     // console.log(browser);
     //An array of all open pages inside the Browser.
     //returns an array with all the pages in all browser contexts
-    let allTabsPromise = browser.pages();
+    let allTabsPromise = browser.pages(); // browser.newPage() -> new tab open hta h 
     return allTabsPromise;
   })
   .then(function (allTabsArr) {
@@ -36,14 +36,15 @@ browserOpenPromise //fulfill
     // console.log(data);
     console.log("Hackerrank login page opened");
     //selector(where to type), data(what to type)
-    let emailWillBeTypedPromise = curTab.type("input[name='username']", email);
+    let emailWillBeTypedPromise = curTab.type("input[name='username']", email, {delay:100});
     return emailWillBeTypedPromise;
   })
   .then(function () {
     console.log("email is typed");
     let passwordWillBeTypedPromise = curTab.type(
       "input[type='password']",
-      password
+      password,
+      { delay: 100 }
     );
     return passwordWillBeTypedPromise;
   })
@@ -93,6 +94,8 @@ browserOpenPromise //fulfill
       questionWillBeSolvedPromise = questionWillBeSolvedPromise.then(function () {
         return questionSolver(linksArr[i], i);
       })
+      // a = 10;
+      // a = a + 1;
     }
     return questionWillBeSolvedPromise;
   }).
@@ -140,7 +143,9 @@ function questionSolver(url, idx) {
         return waitForTextBoxPromise;
       })
       .then(function () {
-        let codeWillBeTypedPromise = curTab.type(".custominput", answer[idx]);
+        let codeWillBeTypedPromise = curTab.type(".custominput", answer[idx], {
+          delay: 100,
+        });
         return codeWillBeTypedPromise;
       })
       .then(function () {
@@ -173,11 +178,11 @@ function questionSolver(url, idx) {
         return controlPressedPromise;
       })
       .then(function () {
-        let aKeyPressedPromise = curTab.keyboard.press("A",{delay:100});
+        let aKeyPressedPromise = curTab.keyboard.press("A");
         return aKeyPressedPromise;
       })
       .then(function () {
-        let vKeyPressedPromise = curTab.keyboard.press("V",{delay:100});
+        let vKeyPressedPromise = curTab.keyboard.press("V");
         return vKeyPressedPromise;
       })
       .then(function () {
