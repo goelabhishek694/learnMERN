@@ -20,9 +20,6 @@
 // let b = 100;
 // console.log(b);
 
-
-
-
 // const request = require("request");
 // let url ="https://www.worldometers.info/coronavirus/"
 // function yolo() {
@@ -47,12 +44,43 @@
 // let b = 100;
 // console.log(b);
 
-for (var i = 1; i <= 10; i++){
-    // hint: closures and scope -> wrapping
-    setTimeout(function () {
-        console.log(i);
-    }, 2000*i);
+// for (var i = 1; i <= 10; i++){
+//     // hint: closures and scope -> wrapping
+//     function outer(a) { //a=1
+//         setTimeout(function () {
+//             console.log(a);
+//         }, 2000 * a);
+//     }
+    
+//     outer(i);
+// }
+
+for (var i = 1; i <= 10; i++) {
+  // hint: closures and scope -> wrapping
+    function cb(a) {
+      console.log(a);
+    };
+    setTimeout( cb, 2000 * i, i);
 }
+
+function a() {
+    let x = 100;
+    function y() {
+        return x;
+    }
+    return y;
+}
+
+let fn = a();
+let ans = fn();
+console.log(ans);
+
+// let i = 1;
+// while (i <= 10) {
+    
+// }
+
+
 
 
 
