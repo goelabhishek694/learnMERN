@@ -6,21 +6,21 @@ const fs = require("fs");
 
 let f1readPromise = fs.promises.readFile("f1.txt");
 
-function cb1(data) {
-    console.log(data + "");
-    let f2readPromise = fs.promises.readFile("f2.txt");
-    return f2readPromise;
+function readf2file(data) {
+  console.log(data + "");
+  let f2readPromise = fs.promises.readFile("f2.txt");
+  return f2readPromise;
 }
 
-function cb2(data) {
+function readf3File(data) {
   console.log(data + "");
   let f3readPromise = fs.promises.readFile("f3.txt");
   return f3readPromise;
 }
 
-function cb3(data) {
+function alldone(data) {
   console.log(data + "");
-  console.log("read all files serially ")
+  console.log("read all files serially ");
 }
 
 f1readPromise
