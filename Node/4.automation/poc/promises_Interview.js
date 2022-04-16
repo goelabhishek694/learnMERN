@@ -6,20 +6,20 @@ const fs = require("fs");
 
 let f1readPromise = fs.promises.readFile("f1.txt");
 
-function readf2file(data) {
-  console.log(data + "");
+function readf2file(f1kadata) {
+  console.log(f1kadata + "");
   let f2readPromise = fs.promises.readFile("f2.txt");
   return f2readPromise;
 }
 
-function readf3File(data) {
-  console.log(data + "");
+function readf3File(f2kadata) {
+  console.log(f2kadata + "");
   let f3readPromise = fs.promises.readFile("f3.txt");
   return f3readPromise;
 }
 
-function alldone(data) {
-  console.log(data + "");
+function alldone(f3kadata) {
+  console.log(f3kadata + "");
   console.log("read all files serially ");
 }
 
