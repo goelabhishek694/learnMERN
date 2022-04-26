@@ -33,6 +33,7 @@ asyncf.then(alert);
 //The keyword await makes JavaScript wait until that promise settles and returns its result.
 //The function execution “pauses” at the line 44 and resumes when the promise settles, with "result" variable
 //await literally suspends the function execution until the promise settles, and then resumes it with the promise result. That doesn’t cost any CPU resources, because the JavaScript engine can do other jobs in the meantime.
+//await waits for promise settlement so, it means it takes care of both .then and .catch
 
 async function f() {
   let promise = new Promise(function(resolve, reject){

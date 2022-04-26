@@ -5,3 +5,9 @@ https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures#bas
 14/04/2022
 
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+
+26/04/2022
+
+https://javascript.info/async-await
+
+what not to read -> `await` accepts “thenables”, Async class methods , `async/await` works well with `Promise.all`, TASKS
