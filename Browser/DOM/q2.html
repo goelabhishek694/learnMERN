@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+    <script>
+        // q2 Fix the list by inserting the missing element
+
+        //3 Steps 
+        //step 1-> get all li elements
+        let unorderedList=document.querySelector("ul");
+        console.log(unorderedList);
+        let liElements=document.querySelectorAll("li");
+        console.log(liElements);
+        //step 2-> create li element
+        let seventhLiElem=document.createElement("li");
+        seventhLiElem.innerText='7';
+        // step 3-> insert before <li>8</li> element
+        let eightLiElem=liElements[6];
+                           //what to insert, before which ele to insert
+        unorderedList.insertBefore(seventhLiElem, eightLiElem);
+        // inserts a node before a reference node as a child of a specified parent node.
+
+    </script>
+</body>
+
+</html>

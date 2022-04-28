@@ -48,3 +48,49 @@ async function f() {
 }
 f();
 console.log("YOLO");
+
+
+async function showAvatar() {
+  // read our JSON
+    let response = await fetch("https://javascript.info/article/promise-chaining/user.json");
+    console.log(response);
+  let user = await response.json();
+    console.log(user);
+  // read github user
+  let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);
+  let githubUser = await githubResponse.json();
+
+  // show the avatar
+  let img = document.createElement("img");
+  img.src = githubUser.avatar_url;
+  img.className = "promise-avatar-example";
+  document.body.append(img);
+
+  // wait 3 seconds
+  await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+
+  img.remove();
+
+  return githubUser;
+}
+
+showAvatar();
+
+//try catch finally 
+try {
+  console.log("in try");
+} catch (e) {
+  console.log(e);
+} finally {
+  console.log("i am always executed");
+  console.log("ditto :)");
+}
+
+try {
+  throw new Error("gadbad ho gayi");
+} catch (e) {
+  console.log(e);
+} finally {
+  console.log("i am always executed");
+  console.log("ditto :)");
+}
