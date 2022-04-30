@@ -39,6 +39,11 @@
             width: 10rem;
             margin: 2rem;
         }
+        .innerbox{
+            margin-top: 1rem;
+            height:5rem;
+            border: 2px rgb(153, 61, 61) solid;
+        }
     </style>
 </head>
 
@@ -51,9 +56,42 @@
     <div class="card" data-color="blue"></div>
     <div class="card" data-color="green"></div>
     <div class="card" data-color="blue"></div>
-    <div class="card" data-color="green"></div>
     <div class="card" data-color="blue"></div>
+    <div class="card" data-color="green"></div>
     
+    <!-- difference between currentTraget and target -->
+    <div class="card card1" data-color="green">
+         <div class="innerbox">
+            <p>Hello from card 1</p>
+        </div>
+    </div>
+    
+    <script>
+        // Q4 Write a script which fetches the data-color attribute of the card on 
+      //double clicking on them and attaches the fetched class to that card.
+      // Also change the data-color attribute to "used"
+
+      let cards=document.querySelectorAll(".card");
+      for(let i=0;i<cards.length;i++){
+          cards[i].addEventListener("dblclick",function(e){
+              console.log(e);
+              let classToBeAttached=e.currentTarget.getAttribute('data-color');
+              e.currentTarget.setAttribute('data-color','used');
+              e.currentTarget.classList.add(classToBeAttached);
+          });
+      }
+
+    //difference between currentTraget and target
+    let card1=document.querySelector(".card1");
+    card1.addEventListener('click',function(e){
+        // console.log(e);
+        console.log(e.currentTarget);
+        console.log(e.target);
+    })
+
+    
+
+    </script>
 </body>
 
 </html>
