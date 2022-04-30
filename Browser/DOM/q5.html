@@ -20,7 +20,27 @@
 
 <body>
     <div class="cell"></div>
-    
+    <p>Style me</p>
+    <script>
+         // Jail The Mouse
+            // Q You are given an empty cell. 
+            //Write a script that whenever the mouse enters 
+            //the cell jail should be drawn over it and it should be removed once it 
+            
+            let cell=document.querySelector(".cell");
+            let p=document.querySelector("p");
+            console.log(p.style);
+            p.style.color="blue";
+            console.log(p.style);
+            cell.addEventListener("mouseover",function(){
+                cell.style.background='url(./jail.jpeg)'
+            });
+
+            cell.addEventListener("mouseout", function () {
+                    cell.style.background = 'none'
+            });
+           
+    </script>
 </body>
 
 </html>

@@ -61,52 +61,80 @@
 <body>
     <h1>BOOK MY SHOW</h1>
     <select>
-        <option value="none">None</option>
+        <option value="all">All</option>
         <option value="action">Action</option>
         <option value="romance">Romance</option>
         <option value="comedy">Comedy</option>
     </select>
 
     <div class="movies">
-        <h3 class="heading">Example-1</h3>
+        <h3 class="heading">Movie-1</h3>
         <p class="price" data-category="action">Rs. 100</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-2</h3>
+        <h3 class="heading">Movie-2</h3>
         <p class="price" data-category="action">Rs 200</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-3</h3>
+        <h3 class="heading">Movie-3</h3>
         <p class="price" data-category="action">Rs. 150</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-4</h3>
+        <h3 class="heading">Movie-4</h3>
         <p class="price" data-category="romance">Rs 200</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-5</h3>
+        <h3 class="heading">Movie-5</h3>
         <p class="price" data-category="romance">Rs. 150</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-6</h3>
+        <h3 class="heading">Movie-6</h3>
         <p class="price" data-category="romance">Rs. 150</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-7</h3>
+        <h3 class="heading">Movie-7</h3>
         <p class="price" data-category="action">Rs 200</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-8</h3>
+        <h3 class="heading">Movie-8</h3>
         <p class="price" data-category="comedy">Rs. 100</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-9</h3>
+        <h3 class="heading">Movie-9</h3>
         <p class="price" data-category="romance">Rs. 100</p>
     </div>
     <div class="movies">
-        <h3 class="heading">Example-10</h3>
+        <h3 class="heading">Movie-10</h3>
         <p class="price" data-category="comedy">Rs 200</p>
     </div>
+
+    <script>
+
+        let select=document.querySelector("select");
+
+        select.addEventListener("change",function(){
+            let selectedValue=select.value;
+
+            let allTickets=document.querySelectorAll("p");
+            if(selectedValue=='all'){
+                for(let i=0;i<allTickets.length;i++){
+                    allTickets[i].style.display="block"
+                }
+            }
+            else{
+                for (let i = 0; i < allTickets.length; i++) {
+                    if(allTickets[i].getAttribute("data-category")!=selectedValue){
+                        //display nhi krni 
+                        allTickets[i].style.display = "none"
+                    }
+                    else{ //agar selectedValue ke equal h 
+                        allTickets[i].style.display = "block"
+                    }
+                }
+            }
+        })
+
+    </script>
 </body>
 
 </html>
