@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid;
+        }
+
+        .red {
+            padding: 2rem;
+            height: 20rem;
+            width: 20rem;
+            background-color: red;
+        }
+
+        .yellow {
+            height: 10rem;
+            width: 10rem;
+            margin: auto;
+            background-color: yellow;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="red">
+        <div class="yellow"></div>
+    </div>
+    <script>
+        //Q9 alert the colour clicked 
+
+        let redColour=document.querySelector(".red");
+
+        redColour.addEventListener("click",function(e){
+            if(e.target==e.currentTarget) alert("red was clicked")
+            else alert("yellow was clicked")
+        });
+
+
+
+       
+
+
+
+    </script>
+</body>
+
+</html>
