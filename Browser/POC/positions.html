@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            border:3px solid red;
+            width: 15rem;
+            position: relative;
+           
+        }
+        .color {
+            height: 5rem;
+            width:5rem;
+            margin-bottom: 1rem;
+            /* position: static; */
+
+            /* relative positioning */
+            /* position: relative; 
+            top:2rem;
+            left: 5rem; */
+
+            /* absolute positioning */
+            /* position: absolute; */
+            /* The initial containing block is the area within the page in which the root element and everything else is rendered. */
+
+
+        }
+        .pink{
+            background-color: lightcoral;
+        }
+        .blue{
+            background-color: lightblue;
+           
+        }
+        .green{
+            background-color: lightgreen;
+            position: absolute;
+            /* left:6rem; */
+        }
+        .seagreen{
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="pink color">1</div>
+        <div class="blue color">2</div>
+        <div class="green color">3</div>
+        <div class="seagreen color">4</div>
+    </div>
+</body>
+</html>

@@ -57,7 +57,66 @@ body {
 .action-btn-cont>*{
   font-size: 2rem;
   color: #d1d8e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
 }
+
+.toolbox-color-cont>*:hover, .action-btn-cont>*:hover{
+  background-color: #485460;
+}
+
+.modal-cont{
+  height:50vh;
+  width:45vw;
+  background-color: lightblue;
+  position: absolute;
+  top:calc((100vh - 50vh)/2);
+  left:calc((100vw - 45vw)/2);
+  display: flex;
+}
+
+textarea{
+  height:100%;
+  width:75%;
+  background-color:#dfe4ea ;
+  font-size:2rem;
+  border:none;
+  outline:none;
+  resize: none;
+}
+
+.priority-color-cont{
+  height:100%;
+  width:25%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #4b4b4b;
+}
+
+.priority-color{
+  height: 10%;
+  width:38%;
+}
+
+
+
+
+
+
+
+
+
+.main-cont{
+  display:flex;
+}
+
+
+
 
 
 
