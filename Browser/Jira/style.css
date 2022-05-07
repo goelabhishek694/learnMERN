@@ -7,3 +7,57 @@ body {
   padding: 0;
 }
 
+.toolbox-cont{
+  height:5rem;
+  background-color: #4b4b4b;
+  display: flex;
+  align-items: center;
+}
+
+.toolbox-cont>*{
+  margin-left: 4rem;
+}
+
+.toolbox-color-cont{
+  height:3.5rem;
+  width:18rem;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.action-btn-cont{
+  height:3.5rem;
+  width:7rem;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.color{
+  height:1.5rem;
+  width:3rem;
+}
+
+.lightpink{
+  background-color: lightpink;
+}
+.lightgreen{
+  background-color: lightgreen;
+}
+.lightblue{
+  background-color: lightblue;
+}
+.black{
+  background-color: black;
+}
+
+.action-btn-cont>*{
+  font-size: 2rem;
+  color: #d1d8e0;
+}
+
+
+
