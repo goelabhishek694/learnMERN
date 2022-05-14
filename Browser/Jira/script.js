@@ -63,3 +63,8 @@ function createTicket(ticketColor, data) {
 
     mainCont.appendChild(ticketCont);
 }
+
+
+
+
+
