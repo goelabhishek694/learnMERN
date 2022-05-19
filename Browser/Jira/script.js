@@ -207,6 +207,7 @@ function handleLock(ticket, id) {
   let ticketTaskArea = ticket.querySelector(".task-area");
   // console.log(ticketLock);
 
+  
   //toggle of icons and contenteditable property
   ticketLock.addEventListener("click", function () {
     let ticketIdx = getTicketIdx(id);
