@@ -9,6 +9,9 @@ const mainCont = document.querySelector(".main-cont");
 let ticketsArr = [];
 let toolBoxColors = document.querySelectorAll(".color");
 let removeBtn = document.querySelector(".remove-btn");
+
+let lockClass = "fa-lock";
+let unlockClass = "fa-lock-open";
 //to open close modal container
 let isModalPresent = false;
 addBtn.addEventListener("click", function () {
@@ -60,6 +63,9 @@ function createTicket(ticketColor, data, ticketId) {
         <div class="ticket-color ${ticketColor} "></div>
         <div class="ticket-id">${id}</div>
         <div class="task-area">${data}</div>
+        <div class="ticket-lock">
+          <i class="fa-solid fa-lock"></i>
+        </div>
     `;
 
     mainCont.appendChild(ticketCont);
@@ -194,7 +200,29 @@ function handleColor(ticket, id) {
 
 //lock and unlock to make content editable true or false 
 function handleLock(ticket, id) {
-    //icons ko append in ticket
-    //toggle of icons and contenteditable property
+  //icons ko append in ticket
+  
+  let ticketLockEle = ticket.querySelector(".ticket-lock");
+  let ticketLock = ticketLockEle.children[0];
+  let ticketTaskArea = ticket.querySelector(".task-area");
+  // console.log(ticketLock);
+
+  //toggle of icons and contenteditable property
+  ticketLock.addEventListener("click", function () {
+    let ticketIdx = getTicketIdx(id);
+    if (ticketLock.classList.contains(lockClass)) {
+      ticketLock.classList.remove(lockClass);
+      ticketLock.classList.add(unlockClass);
+      ticketTaskArea.setAttribute("contenteditable", "true");
+    }
+    else { //if lock is open
+      ticketLock.classList.remove(unlockClass);
+      ticketLock.classList.add(lockClass);
+      ticketTaskArea.setAttribute("contenteditable", "false");
+    }
+
+    ticketsArr[ticketIdx].data = ticketTaskArea.innerText;
+    localStorage.setItem("tickets", JSON.stringify(ticketsArr));
+  });
 }
 
