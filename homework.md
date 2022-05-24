@@ -25,3 +25,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/Event/target
 https://javascript.plainenglish.io/how-to-use-stringify-and-parse-in-javascript-6b637b571a32
 
 https://www.freecodecamp.org/news/json-stringify-example-how-to-parse-a-json-object-with-javascript/
+
+24/05/22
+
+https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
