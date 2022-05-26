@@ -29,3 +29,9 @@ https://www.freecodecamp.org/news/json-stringify-example-how-to-parse-a-json-obj
 24/05/22
 
 https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
+
+26/5/22
+
+https://blog.logrocket.com/how-browser-rendering-works-behind-scenes/
+
+https://stackoverflow.com/questions/6682997/what-is-the-purpose-of-a-plus-symbol-before-a-variable
