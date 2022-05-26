@@ -24,6 +24,63 @@ for (key in Obj) {
     console.log(Obj[key]);
 }
 
-//2nd ques
+let user={
+    name:"Abhi",
+    age:30
+}
+let clone={};
+
+Object.assign(clone,user);
+//{name: 'Abhi', age: 30}
+clone
+//{name: 'Abhi', age: 30}
+clone.name = "Abhishek"
+Object.assign(clone, user, { name: "Abhishek Goel" }); //replace the name propert
+Object.assign(clone, user, { fullName: "Abhishek Goel" }); //adds fullName property
+
+
+//deep clone 
+
+let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50,
+  },
+};
+let clone = {};
+//this is not deep cloning , because refference to size identifier is same in both clone and user obj 
+Object.assign(clone, user);
+console.log(clone);
+clone.name = "ABHISHEK";
+console.log(clone);
+clone.sizes.height = 123;
+console.log(clone);
+console.log(user);
+
+//flatten an Object 
+
+let flattenedObj={ 
+  "name": "Jhon",
+  "sizes.height" : 182,
+  "sizes.width":50
+}
+//it only deep clones the properties in an obj and not the method 
+JSON.stringify()
+
+const c = 20;
+c = 23; //error
+
+const user1 = #f45d3 
+#f45d3 ->
+{
+  name: "Abhi",
+  age: 30,
+  email:"talk2me@gmail.com"
+}
+
+user.name = "Abhi";
+console.log(user);
+
 
 
