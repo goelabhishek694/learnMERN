@@ -83,17 +83,87 @@
 // console.log(user);
 
 
-let user = {
-  name: "Abhishek",
-  sayHi() { 
-    console.log(this.name);
+// let user = {
+//   name: "Abhishek",
+//   sayHi() { 
+//     console.log(this.name);
+//   }
+// }
+
+// let admin = user;
+
+// user = null;
+// user.sayHi();
+
+// admin.sayHi();
+//<----- rules---->
+  //1. The value of this is evaluated during the run-time, depending on the context.
+  //2. t
+// this interviewques types
+
+//1 
+
+function type1() {
+  console.log(this.name);
+}
+
+var name = "JS";
+
+type1();  //globally , this -> window , 
+
+//2
+
+function type2() {
+  console.log(this.lname);
+}
+
+var lname = "Kumar";
+
+var obj = {
+  lname: "Verma",
+  type2
+}
+
+obj.type2();//in execution context of function, 'this' gives reference to the obj
+
+
+//3
+
+var food = "Pizaa";
+
+var obj = {
+  food: "Pasta",
+  eat() {
+    console.log("i am eating " + this.food);
   }
 }
 
-let admin = user;
+var foo = obj.eat;
 
-user.sayHi();
-user = null;
-admin.sayHi();
+foo();
+
+
+
+
+
+// 'use strict'
+
+// var z;
+// console.log(z); 
+
+// y = 10;
+// console.log(y); //10 
+
+// console.log(x); //error , because memory is allocated on variable declaration , but in this cases variable has not been declsred , intilaized 
+// x = 6;  
+
+
+// function sayHi() {
+//   //undefined in case of node, "" in case of browser (non strict )
+//   // strict mode-> error in both the cases
+//   console.log(this.name); 
+// }
+// sayHi();
+
 
 
