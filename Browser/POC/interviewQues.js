@@ -160,7 +160,6 @@ var obj = {
 
 obj.square();
 
-
 // 'use strict'
 
 // var z;
