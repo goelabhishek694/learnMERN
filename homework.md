@@ -35,3 +35,11 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 https://blog.logrocket.com/how-browser-rendering-works-behind-scenes/
 
 https://stackoverflow.com/questions/6682997/what-is-the-purpose-of-a-plus-symbol-before-a-variable
+
+2/06/22
+
+https://javascript.info/object-toprimitive
+
+https://javascript.info/optional-chaining
+
+https://javascript.info/arrow-functions-basics
