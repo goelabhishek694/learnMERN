@@ -43,3 +43,13 @@ https://javascript.info/object-toprimitive
 https://javascript.info/optional-chaining
 
 https://javascript.info/arrow-functions-basics
+
+4/06/22
+
+https://javascript.info/string
+
+https://javascript.info/array-methods
+
+https://javascript.info/destructuring-assignment
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
