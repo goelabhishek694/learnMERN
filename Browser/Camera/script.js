@@ -22,17 +22,26 @@ navigator.mediaDevices.getUserMedia(constraints)
     recorder.addEventListener("start", (e) => {
         //memory
         chunks = [];
+        console.log('rec started');
     })
 
     recorder.addEventListener("dataavailable", (e) => {
         chunks.push(e.data);
+        console.log('recording pushed in chunks');
     });
 
     recorder.addEventListener("stop", () => {
         //convert video 
-        // let blob = new Blob(chunks, { type: 'video/mp4' });
-
+        let blob = new Blob(chunks, { type: 'video/mp4' });
+        console.log('rec stopped');
         // download video on desktop
+        let videoURL = URL.createObjectURL(blob);
+        console.log(videoURL);
+        
+        let a = document.createElement('a');
+        a.href = videoURL;
+        a.download = "myVideo.mp4";
+        a.click();
         //store in database
     })
 
@@ -77,6 +86,42 @@ recordBtnCont.addEventListener("click", () => {
     }
 
 });
+
+let timer = document.querySelector('.timer');
+
+let counter = 0;
+let timerID;
+function startTimer() {
+    timer.style.display = 'block';
+    function displayTimer(){
+        let totalSeconds = counter;
+
+        let hours = Number.parseInt(totalSeconds / 3600);
+        totalSeconds = totalSeconds % 3600;
+
+        let minutes = Number.parseInt(totalSeconds / 60);
+        totalSeconds = totalSeconds % 60;
+
+        let seconds = totalSeconds;
+
+        hours = (hours < 10) ? `0 ${hours}` : hours;
+        minutes = minutes < 10 ? `0 ${minutes}` : minutes;
+        seconds = seconds < 10 ? `0 ${seconds}` : seconds;
+        timer.innerText = `${hours}:${minutes}:${seconds}`;
+
+        counter++;
+
+    }
+
+    timerID=setInterval(displayTimer, 1000);
+
+}
+
+function stopTimer() {
+    clearInterval(timerID);
+    timer.innerText = "00:00:00";
+    timer.style.display = 'none';
+}
 
 
 

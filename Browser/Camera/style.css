@@ -64,6 +64,10 @@
     z-index: 2;
  }
 
+ .timer{
+     display: none;
+ }
+
 
  .filter-cont{
      position:absolute;
