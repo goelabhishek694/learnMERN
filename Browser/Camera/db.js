@@ -1,7 +1,7 @@
 //connect to database
 let db;
 let openRequest = indexedDB.open('myDatabase');
-
+let a = 123;
 openRequest.addEventListener('success', () => {
     console.log('db connected');
     db = openRequest.result;
@@ -18,3 +18,5 @@ openRequest.addEventListener("upgradeneeded", () => {
 openRequest.addEventListener("error", () => {
     console.log("db error");
 });
+
+
