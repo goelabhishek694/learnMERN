@@ -30,8 +30,34 @@ h1{
 }
 
 .gallery-cont{
-    background-color: lightcyan;
+    background-color: rgb(5, 105, 105);
     min-height: 100vh;
     width: 100vw;
-    /* display: flex; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.media-cont{
+    height: 15rem;
+    width: 15rem;
+    /* background-color: rgb(4, 33, 4); */
+    border: 10px solid white;
+    margin: 2rem;
+}
+
+.action-btn{
+    height:2rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download{
+    background-color: black;
+}
+
+.delete{
+    background-color: red;
 }
