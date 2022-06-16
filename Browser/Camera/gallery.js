@@ -10,6 +10,7 @@ setTimeout(() => {
                 let imageElem = document.createElement("div");
                 imageElem.setAttribute("class", "media-cont");
                 imageElem.setAttribute("id", imageObj.id);
+
                 let url = imageObj.url;
 
                 imageElem.innerHTML = `
