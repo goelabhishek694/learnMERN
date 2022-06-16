@@ -1,3 +1,8 @@
+let gallery = document.querySelector(".gallery");
+gallery.addEventListener("click", () => {
+    location.assign("./gallery.html");
+});
+
 var uid = new ShortUniqueId();
 let video = document.querySelector("video");
 let captureBtnCont = document.querySelector(".capture-btn-cont");
@@ -48,7 +53,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
         let dbTransaction = db.transaction("video", "readwrite");
         let videoStore = dbTransaction.objectStore("video");
         let videoEntry = {
-          id: videoId,
+          id: `vid-${videoId}`,
           url: videoURL,
         };
         let addRequest = videoStore.add(videoEntry);
@@ -84,7 +89,7 @@ captureBtnCont.addEventListener("click", () => {
     let dbTransaction = db.transaction("image", "readwrite");
       let imageStore = dbTransaction.objectStore("image");
       let imageEntry = {
-        id: imageId,
+        id: `img-${imageId}`,
         url: imageURL,
       };
       let addRequest=imageStore.add(imageEntry);
