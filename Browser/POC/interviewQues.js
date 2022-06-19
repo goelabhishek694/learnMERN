@@ -294,3 +294,13 @@ let title, width, height; //->same as let title; let height; let width;
 
 // error in this line
 ({ title, width, height } = { title: "Menu", width: 200, height: 100 });
+
+
+// sort an arr using setTimeout
+
+const ar = [10, 20, 1, 5, 8, 50, 100];
+//desired output-> 1,5,8,10,20,50,100
+
+for (let num of arr) {
+  setTimeout(() => console.log(num), num);
+}
