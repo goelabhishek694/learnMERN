@@ -213,6 +213,8 @@ var ans = narr.myMap(function (num) {
 });
 console.log(ans);
 
+Array.prototype.mySize = 8;
+console.log(narr.mySize);
 
 
 
