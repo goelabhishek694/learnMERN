@@ -54,7 +54,10 @@ https://javascript.info/destructuring-assignment
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 
-
 19/6/22
 
 https://dev.to/sanspanic/the-javascript-reduce-method-3j8l
+
+21/6/22
+
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
