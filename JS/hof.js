@@ -191,6 +191,34 @@ var ans=users.reduce(getPeopleLessThan30,[]);
 console.log(ans);
 
 
+// console.log(calculate(arr, area));
+
+// console.log(arr.calculate(area));
+console.log(arr.map(area));
+
+//implementation of our own map 
+Array.prototype.myMap = function (logic) {
+  let res = [];
+  for (let i = 0; i < this.length; i++) {
+    res.push(logic(this[i]));
+  }
+  return res;
+}
+var narr = [1, 2, 3, 4];
+var ans = narr.myMap(area);
+console.log(ans);
+
+var ans = narr.myMap(function (num) {
+  return num * 3;
+});
+console.log(ans);
+
+
+
+
+
+
+
 
 
 
