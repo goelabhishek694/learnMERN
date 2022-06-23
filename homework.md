@@ -61,3 +61,9 @@ https://dev.to/sanspanic/the-javascript-reduce-method-3j8l
 21/6/22
 
 https://www.youtube.com/watch?v=8aGhZQkoFbQ
+
+23/6/22
+
+https://javascript.info/function-prototype
+
+https://javascript.info/script-async-defer
