@@ -67,3 +67,7 @@ https://www.youtube.com/watch?v=8aGhZQkoFbQ
 https://javascript.info/function-prototype
 
 https://javascript.info/script-async-defer
+
+25/6/22
+
+https://javascript.info/polyfills
