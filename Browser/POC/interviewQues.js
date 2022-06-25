@@ -102,7 +102,7 @@
 // this interviewques types
 
 //1 
-
+//default binding
 function type1() {
   console.log(this.name);
 }
@@ -123,7 +123,7 @@ var obj = {
   lname: "Verma",
   type2
 }
-
+//implicit binding 
 obj.type2();//in execution context of function, 'this' gives reference to the obj
 
 
@@ -147,6 +147,7 @@ foo();
 
 var length = 1;
 function square() {
+  // let length = 1;
   let cb = function () {
     console.log(this.length * this.length);
   };
