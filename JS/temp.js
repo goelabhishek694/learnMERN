@@ -10,6 +10,9 @@ var obj = {
     hello:123
 }
 
+var a = 100;
 // console.log("printed in temp "+obj);
 
-module.exports = obj;
+// module.exports = obj;
+
+export default obj;

@@ -79,4 +79,14 @@ var a=str.split("hello");
 console.log(a);
 
 
+export const key = "SHA-23402340";
+export var exportedObj = {
+    name: "Abhishek",
+    age:32
+}
+
+
+
+
+
 
