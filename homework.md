@@ -71,3 +71,9 @@ https://javascript.info/script-async-defer
 25/6/22
 
 https://javascript.info/polyfills
+
+28/6/22
+
+https://stackoverflow.com/questions/33869145/is-it-possible-for-global-execution-context-to-pop-off-the-execution-stack
+
+https://stackoverflow.com/questions/19707969/the-invocation-context-this-of-the-foreach-function-call
