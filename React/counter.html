@@ -41,7 +41,9 @@
         }        
     }
 
-    ReactDOM.render(<Counter/>,document.getElementById("root"));
+    // ReactDOM.render(<Counter/>,document.getElementById("root"));
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Counter/>);
 
 </script>
 </html>
