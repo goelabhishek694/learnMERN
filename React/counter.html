@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,41 +10,49 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <title>class Components</title>
 </head>
+
 <body>
     <div id="root"></div>
 </body>
 <script type="text/babel">
 
-    class Counter extends React.Component{
-        constructor(){
+    class Counter extends React.Component {
+        constructor() {
             super();
-            this.state={
-                count:0
+            this.state = {
+                count: 0
             }
         }
 
-        increment=()=>{
+        increment = () => {
             this.setState({
-                count:this.state.count+1
+                count: this.state.count + 1
             })
         }
 
+        decrement = () => {
+            if(this.state.count>0){
+                this.setState({
+                    count: this.state.count - 1
+                })
+            }
+        }
 
-
-        render(){
-            return(
+        render() {
+            return (
                 <React.Fragment>
-                <button onClick={this.increment}>+</button>
-                <h1>{this.state.count}</h1>
-                <button>-</button>
+                    <button onClick={this.increment}>+</button>
+                    <h1>{this.state.count}</h1>
+                    <button onClick={this.decrement}>-</button>
                 </React.Fragment>
             )
-        }        
+        }
     }
 
     // ReactDOM.render(<Counter/>,document.getElementById("root"));
     const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<Counter/>);
+    root.render(<Counter />);
 
 </script>
+
 </html>
