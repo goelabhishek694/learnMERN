@@ -22,9 +22,23 @@ export default class Todo extends Component {
 
   handleSubmit = () => {
     this.setState({
-      tasks:[...this.state.tasks,{task:this.state.curTask,id:this.state.tasks.length+1}]
-    })
-  }
+      tasks: [
+        ...this.state.tasks,
+        { task: this.state.curTask, id: this.state.tasks.length + 1 },
+      ],
+      curTask: "",
+    });
+  };
+
+  handleDeleteTasks = (id) => {
+    // let narr = [];
+    let narr = this.state.tasks.filter((taskObj)=>{
+      return taskObj.id != id;
+    });
+    this.setState({
+      tasks: [...narr],
+    });
+  };
 
   render() {
     console.log("render method is called");
@@ -41,11 +55,13 @@ export default class Todo extends Component {
 
         {
           // use when need to write JS in jsx
-          this.state.tasks.map(function (taskObj) {
+          this.state.tasks.map((taskObj)=>{
             return (
               <li key={taskObj.id}>
                 <p>{taskObj.task}</p>
-                <button>Delete</button>
+                <button onClick={() => this.handleDeleteTasks(taskObj.id)}>
+                  Delete
+                </button>
               </li>
             );
           })
@@ -54,3 +70,4 @@ export default class Todo extends Component {
     );
   }
 }
+
