@@ -38,5 +38,83 @@
 }
 
 .banner-card{
-  background-color: lightcoral;
+  background-color: white;
+  width:100vw;
 }
+
+.banner-img{
+  height:70vh;
+  width:100%;
+}
+
+.banner-title{
+  position:absolute;
+  color:white;
+  top:50vh;
+  left:5vw;
+  /* font-size:2rem; */
+}
+.banner-text{
+  position:absolute;
+  color:white;
+  top:60vh;
+  left:5vw;
+  margin-right: 5vw;
+  /* overflow: hidden; */
+}
+
+.movies-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+.movie-card{
+width:20vw;
+margin:1rem;
+color:white;
+position: relative;
+}
+
+.movie-title{
+  position: absolute;
+  top:1rem;
+  left:1rem;
+}
+
+.movie-button{
+  position: absolute;
+  top:80%
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:400px) {
+  .banner-card{
+    height:25vh;
+  }
+
+  .banner-img{
+    height:30vh;
+  }
+
+  .banner-title{
+    top:10vh;
+    left:5vw;
+  }
+
+  .banner-text{
+    top:15vh;
+    left:5vw;
+  }
+}
+
