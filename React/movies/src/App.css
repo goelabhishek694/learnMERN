@@ -97,6 +97,13 @@ position: relative;
   justify-content: center;
 }
 
+.favourites-list{
+    padding: 3rem;
+  }
+  .favourites-table{
+    padding: 3rem;
+  }
+
 
 
 
@@ -131,5 +138,10 @@ position: relative;
   .movie-img{
     width: 40vw;
   }
+
+  
+  
 }
+
+
 
