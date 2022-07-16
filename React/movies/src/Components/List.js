@@ -5,7 +5,7 @@ import API_KEY from "../secrets";
 export default class List extends Component {
   constructor() {
     super();
-    // console.log("constructor is called");
+    console.log("constructor is called");
     this.state = {
       hover: "",
       parr: [1], //ab tak main konse page par hu , or what page result am i showing ,
@@ -26,8 +26,33 @@ export default class List extends Component {
       });
   };
 
+  changeMovies = async () => {
+     console.log(this.state.currPage);
+    console.log("changeMovies called");
+    let ans = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}d&language=en-US&page=${this.state.currPage}`
+    );
+    // console.log(ans.data);
+    this.setState({
+      movies: [...ans.data.results] //[{},{},{}]
+    })
+  }
+
+  handleNext = () => {
+    let tempArr = [];
+    for (let i = 1; i <= this.state.parr.length + 1; i++){
+      tempArr.push(i); //[1,2]
+    } 
+    this.setState({
+      parr: [...tempArr],
+      currPage: this.state.currPage + 1
+    });
+    this.changeMovies();
+    
+  }
+
   async componentDidMount() {
-    // console.log("componentDidMount is called");
+    console.log("componentDidMount is called");
     // console.log(API_KEY);
     let ans = await axios.get(
       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}d&language=en-US&page=${this.state.currPage}`
@@ -38,7 +63,7 @@ export default class List extends Component {
     })
   }
   render() {
-    // console.log("render is called");
+    console.log("render is called");
     // let movie = movies.results; //fetch
     return (
       <>
@@ -99,7 +124,7 @@ export default class List extends Component {
                       ))
                     }
                   <li class="page-item">
-                    <a class="page-link" href="#">
+                    <a class="page-link" onClick={this.handleNext}>
                       Next
                     </a>
                   </li>
