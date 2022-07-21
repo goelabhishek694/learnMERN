@@ -5,7 +5,7 @@ import API_KEY from "../secrets";
 export default class List extends Component {
   constructor() {
     super();
-    console.log("constructor is called");
+    // console.log("constructor is called");
     this.state = {
       hover: "",
       parr: [1], //ab tak main konse page par hu , or what page result am i showing ,
@@ -28,8 +28,8 @@ export default class List extends Component {
   };
 
   changeMovies = async () => {
-    console.log(this.state.currPage);
-    console.log("changeMovies called");
+    // console.log(this.state.currPage);
+    // console.log("changeMovies called");
     let ans = await axios.get(
       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}d&language=en-US&page=${this.state.currPage}`
     );
@@ -77,8 +77,10 @@ export default class List extends Component {
       );
     }
     else localStorageMovies.push(movieObj);
-     console.log(localStorageMovies);
+    console.log(localStorageMovies);
+    
     localStorage.setItem("movies", JSON.stringify(localStorageMovies));
+
     let tempData = localStorageMovies.map(movieObj => movieObj.id);
     this.setState({
       favMov: [...tempData]
@@ -86,7 +88,7 @@ export default class List extends Component {
   }
 
   async componentDidMount() {
-    console.log("componentDidMount is called");
+    // console.log("componentDidMount is called");
     // console.log(API_KEY);
     let ans = await axios.get(
       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}d&language=en-US&page=${this.state.currPage}`
@@ -136,7 +138,7 @@ export default class List extends Component {
                         class="btn btn-danger movie-button"
                         onClick={() => this.handleFavourites(movieObj)}
                       >
-                        Add to Favourites
+                        {this.state.favMov.includes(movieObj.id)?"Remove from Favourites":"Add to Favourites" }
                       </a>
                     )}
                   </div>
