@@ -8,6 +8,7 @@ export default class Favourites extends Component {
       movies: [],
       genre: [],
       currGenre: "All Genre",
+      currText:"",
     };
   }
 
@@ -59,6 +60,12 @@ export default class Favourites extends Component {
     // movies filter movies setstate
   }
 
+  handleText = (e) => {
+    this.setState({
+      currText: e.target.value
+    });
+  }
+
   render() {
     let genreId = {
       28: "Action",
@@ -82,12 +89,21 @@ export default class Favourites extends Component {
       37: "Western",
     };
     let filteredMovies = [];
+    if (this.state.currText == '') {
+      filteredMovies=this.state.movies;
+    }
+    else {
+      filteredMovies = this.state.movies.filter(movieObj => {
+        let movieName = movieObj.original_title.toLowerCase();
+        return movieName.includes(this.state.currText);//[t,o,p, ,g,u,n, ,m,a,v,e,r,i,c,k]
+      })
+    }
+
     if (this.state.currGenre != "All Genre") {
       filteredMovies = this.state.movies.filter(
         (movieObj) => genreId[movieObj.genre_ids[0]]==this.state.currGenre
       );
     }
-    else filteredMovies=this.state.movies;
 
     return (
       <div class="row">
@@ -112,7 +128,13 @@ export default class Favourites extends Component {
         </div>
         <div class="col favourites-table">
           <div class="row">
-            <input type="text" className="col-8" placeholder="Search"></input>
+            <input
+              type="text"
+              className="col-8"
+              placeholder="Search"
+              value={this.state.currText}
+              onChange={this.handleText}
+            ></input>
             <input type="number" className="col-4" placeholder="5"></input>
           </div>
           <div class="row">
@@ -121,8 +143,16 @@ export default class Favourites extends Component {
                 <tr>
                   <th scope="col">Title</th>
                   <th scope="col">Genre</th>
-                  <th scope="col">Popularity</th>
-                  <th scope="col">Rating</th>
+                  <th scope="col">
+                    <i class="fa-solid fa-caret-up" />
+                    Popularity
+                    <i class="fa-solid fa-caret-down" />
+                  </th>
+                  <th scope="col">
+                    <i class="fa-solid fa-caret-up" />
+                    Rating
+                    <i class="fa-solid fa-caret-down" />
+                  </th>
                   <th scope="col"></th>
                 </tr>
               </thead>
