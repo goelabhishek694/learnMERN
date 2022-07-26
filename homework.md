@@ -77,3 +77,13 @@ https://javascript.info/polyfills
 https://stackoverflow.com/questions/33869145/is-it-possible-for-global-execution-context-to-pop-off-the-execution-stack
 
 https://stackoverflow.com/questions/19707969/the-invocation-context-this-of-the-foreach-function-call
+
+26/7/22
+
+https://reactjs.org/docs/introducing-jsx.html
+
+https://reactjs.org/docs/rendering-elements.html
+
+https://reactjs.org/docs/components-and-props.html
+
+https://reactjs.org/docs/state-and-lifecycle.html
