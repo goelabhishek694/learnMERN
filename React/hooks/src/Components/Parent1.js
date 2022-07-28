@@ -3,7 +3,7 @@ import Child from '../Child'
 import context from "./Context";
 
 function Parent1() {
-    const theme = useContext(context);
+    const {theme} = useContext(context);
     return (
         <div className={theme ? "dark" : "light"}>
           Parent1

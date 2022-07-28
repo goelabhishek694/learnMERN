@@ -11,8 +11,9 @@ import Parent1 from './Components/Parent1';
 import Parent2 from "./Components/Parent2";
 function App() {
   const [theme, setTheme] = useState(false);
+  const [count, setCount] = useState(10);
   return (
-    <context.Provider value={theme}>
+    <context.Provider value={{ theme, count }}>
       <button onClick={() => setTheme(!theme)}>Change Theme</button>
       {/*  <Us></Us>
       <Ue1></Ue1>
