@@ -87,3 +87,7 @@ https://reactjs.org/docs/rendering-elements.html
 https://reactjs.org/docs/components-and-props.html
 
 https://reactjs.org/docs/state-and-lifecycle.html
+
+28/7/22
+
+https://www.freecodecamp.org/news/how-to-deploy-a-react-application-to-netlify-363b8a98a985/
