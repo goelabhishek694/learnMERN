@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import TextField from "@mui/material/TextField";
-import Image from "next/image"
-import logo from '../../assets/Instagram.jpeg'
+import Image from "next/image";
+import logo from "../../assets/Instagram.jpeg";
 import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import IconButton from "@mui/material/IconButton";
@@ -28,27 +28,8 @@ function index() {
           margin="dense"
           type="password"
         />
-        <TextField
-          id="outlined-basic"
-          size="small"
-          label="Full Name"
-          variant="outlined"
-          fullWidth
-          margin="dense"
-        />
-        <Button
-          color="secondary"
-          variant="outlined"
-          component="label"
-          fullWidth
-          size="small"
-        >
-          <IconButton color="secondary">
-            <CloudUploadIcon />
-          </IconButton>
-          Upload Profile Image
-          <input hidden accept="image/*" multiple type="file" />
-        </Button>
+
+        <div style={{color:"blue", marginTop:"0.5rem"}}>Forget Password </div>
 
         <Button
           style={{ marginTop: "1rem" }}
@@ -56,18 +37,15 @@ function index() {
           component="label"
           fullWidth
         >
-          Sign Up
+          Log in
         </Button>
-        <div className="tnc" >
-          By signing up, you agree to our Terms, Conditions and Cookies policy.
-        </div>
       </div>
       <div className="bottom-card">
-        Already Have an account ?{" "}
-        <span style={{ color: "blueviolet" }}>Login</span>
+        Don't Have an account ?{" "}
+        <span style={{ color: "blueviolet" }}>Signup</span>
       </div>
     </div>
   );
 }
 
-export default index
+export default index;

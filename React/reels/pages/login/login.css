@@ -10,7 +10,7 @@
 
 .signup-card{
     width:25rem;
-    height:27rem;
+    height:18rem;
     border: 1px solid #ccc;
     padding: 1rem;
 }
@@ -22,11 +22,5 @@
  margin-top: 1rem;
 }
 
-.tnc{
-    width:25rem;
-    padding: 1rem;
-    margin-top: 1rem;
-    color:gray;
-}
 
-/* style={{color:"gray", width:"25rem", padding:"1rem", marginTop:"1rem"}} */
+
