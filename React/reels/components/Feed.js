@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 function Feed() {
   return (
-      <div>
+      <div className="feed-container">
           <Navbar/>
       </div>
   )
