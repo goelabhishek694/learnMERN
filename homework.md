@@ -95,3 +95,7 @@ https://www.freecodecamp.org/news/how-to-deploy-a-react-application-to-netlify-3
 4/8/22
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+
+7/8/22
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
