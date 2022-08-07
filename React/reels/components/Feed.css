@@ -1,3 +1,9 @@
+.feed-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .navbar{
     display:flex;
     justify-content: center;
@@ -17,6 +23,41 @@
     justify-content: center;
     align-items: center;
 }
+
+.upload-btn{
+    margin-top: 1rem;
+}
+
+.videos-container{
+    height: 70vh;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    scrollbar-width: 0;
+    overflow-y: scroll;
+
+}
+
+.videos-container::-webkit-scrollbar{
+    /* display: none; */
+}
+.post-container{
+    height: 100%;
+    width:20rem;
+    margin-bottom: 0.6rem;
+}
+
+.post-container>video{
+    height: 100%;
+    width:20rem;
+    object-fit: contain;
+    background-color: lightpink;
+    border-radius: 15px;
+}
+
+
+
+
+
 
 @media screen and (max-width:500px){
     .nav-icons{
