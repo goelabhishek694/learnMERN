@@ -52,7 +52,7 @@
     height: 100%;
     width:20rem;
     object-fit: contain;
-    /* background-color: lightpink; */
+    background-color: lightpink;
     border-radius: 15px;
     position: relative;
 }
