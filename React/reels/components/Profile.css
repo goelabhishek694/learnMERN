@@ -1,0 +1,30 @@
+.profile-intro{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    align-items: center;
+}
+
+.profile-posts{
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-posts>video{
+    border:2px solid black;
+    width:15rem;
+    height: 30rem;
+    padding: 0.5rem;
+
+}
+
+@media only screen and (max-width:500px){
+    .profile-intro{
+        flex-direction: column;
+    }
+}
