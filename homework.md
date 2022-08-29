@@ -99,3 +99,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
 7/8/22
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+26/8/22
+
+https://javascript.info/import-export
+https://stackoverflow.com/questions/29660381/backticks-calling-a-function-in-javascript#:~:text=Using%20this%20syntax%2C%20the%20function,those%20which%20are%20expressions).https://stackoverflow.com/questions/12433223/different-behaviour-of-delete-keyword-on-global-variables
