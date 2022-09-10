@@ -1,5 +1,5 @@
 // < --------------Question 1----------------->
-155
+What is the output ?
 let randomValue = { name: "Lydia" };
 randomValue = 23;
 
@@ -11,12 +11,12 @@ if (!typeof randomValue === "string") {
 }
 
 A: It's not a string!
-B: Yay it's a string! -> Ans
+B: Yay it's a string!
 C: TypeError
 D: undefined
 
 // < --------------Question 2----------------->
-
+What is the output ?
 const user = {
 	email: "my@email.com",
 	updateEmail: function (email){
@@ -33,6 +33,7 @@ C: undefined
 D: ReferenceError
 
 // < --------------Question 3----------------->
+What is the output ?
 const fruit = ['🍌', '🍊', '🍎']
 
 fruit.slice(0, 1)
@@ -47,7 +48,7 @@ C: ['🍇', '🍊', '🍎']
 D: ['🍇', '🍌', '🍊', '🍎']
 
 // < --------------Question 4----------------->
-
+What is the output ?
 let count = 0;
 const nums = [10, 11, 12, 13]; 
 for(var i in nums){
@@ -96,7 +97,7 @@ C: 2 Error and 3 6
 D: 2 4 and 3 Error
 
 // < --------------Question 7----------------->
-137
+
 // for this question google what Object.freeze does 
 
 Which of the following will modify the person object?
@@ -115,7 +116,7 @@ C: person.address.street = "101 Main St"
 D: person.pet = { name: "Mara" }
 
 // < --------------Question 8----------------->
-136
+
 // for this question google what Object.seal does 
 Which of the following will modify the person object?
 const person = { name: 'Lydia Hallie' };
@@ -129,6 +130,7 @@ D: Object.assign(person, { age: 21 })
 
 // < --------------Question 9----------------->
 // read: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
+What is the output ?
 const emojis = ['🥑', ['✨', '✨', ['🍕', '🍕']]];
 
 console.log(emojis.flat(1));
@@ -139,8 +141,8 @@ D: ['🥑', '✨', '✨', '🍕', '🍕']
 
 // < --------------Question 10----------------->
 
+What is the output ?
 var randomValue = 21;
-
 function getInfo() {
   console.log(typeof randomValue);
   var randomValue = 'Lydia Hallie';
@@ -155,6 +157,7 @@ D: ReferenceError
 
 // < --------------Question 11----------------->
 
+What is the output ?
 const add = function (x) {
     function inner (y) {
         function innermost (z) {
@@ -176,6 +179,7 @@ D: undefined undefined 6
 // < --------------Question 12----------------->
 // read:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 
+What is the output ?
 const groceries = ['banana', 'apple', 'peanuts'];
 
 if (groceries.indexOf('banana')) {
@@ -192,6 +196,7 @@ D: 1
 // < --------------Question 13----------------->
 // read:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
+What is the output ?
 const person = {
   firstName: 'Lydia',
   lastName: 'Hallie',
@@ -227,6 +232,8 @@ D: ReferenceError
 
 // < --------------Question 15----------------->
 // read:https://www.w3schools.com/react/react_es6_spread.asp
+Which function call is correct ?
+
 function sumValues(x, y, z) {
   return x + y + z;
 }
@@ -261,6 +268,7 @@ D: { name: "Lydia", age: 23 }
 
 // < --------------Question 17----------------->
 
+What is the output ?
 const food = ['🍕', '🍫', '🥑', '🍔'];
 const info = { favoriteFood: food[0] };
 
@@ -274,6 +282,7 @@ D: ReferenceError
 
 // < --------------Question 18----------------->
 
+What is the output ?
 const colorConfig = {
   red: true,
   blue: false,
@@ -291,6 +300,7 @@ C: undefined
 D: TypeError
 
 // < --------------Question 19----------------->
+What is the output ?
 
 function nums(a, b) {
   if (a > b) console.log('a is bigger');
@@ -310,6 +320,7 @@ D: SyntaxError
 // < --------------Question 20----------------->
 // read: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
 
+What is the output ?
 const person = {
   name: 'Lydia',
   age: 21,
@@ -325,15 +336,17 @@ D: Error
 
 // < --------------Question 21----------------->
 
+What is the output ?
 let newList = [1, 2, 3].push(4);
-
 console.log(newList.push(5));
+
 A: [1, 2, 3, 4, 5]
 B: [1, 2, 3, 5]
 C: [1, 2, 3, 4]
 D: Error
 
 // < --------------Question 22----------------->
+What is the output ?
 console.log('I want pizza'[0]);
 A: """
 B: "I"
@@ -341,7 +354,7 @@ C: SyntaxError
 D: undefined
 
 // < --------------Question 23----------------->
-
+What is the output ?
 function checkAge(age) {
   if (age < 18) {
     const message = "Sorry, you're too young.";
@@ -359,7 +372,7 @@ C: ReferenceError
 D: undefined
 
 // < --------------Question 24----------------->
-
+What is the output ?
 const person = {
   name: 'Lydia',
   age: 21,
@@ -375,7 +388,7 @@ C: { name: "Lydia", age: 21, city: undefined }
 D: "Amsterdam"
 
 // < --------------Question 25----------------->
-
+What is the output ?
 const user = { name: 'Lydia', age: 21 };
 const admin = { admin: true, ...user };
 
@@ -386,7 +399,7 @@ C: { admin: true, user: ["Lydia", 21] }
 D: { admin: true }
 
 // < --------------Question 26----------------->
-
+What is the output ?
 console.log(3 + 4 + '5');
 A: "345"
 B: "75"
@@ -394,7 +407,7 @@ C: 12
 D: "12"
 
 // < --------------Question 27----------------->
-
+What is the output ?
 const person = {
   name: 'Lydia',
   age: 21,
@@ -410,7 +423,7 @@ C: "Lydia", 21
 D: ["name", "Lydia"], ["age", 21]
 
 // < --------------Question 28----------------->
-
+What is the output ?
 const numbers = [1, 2, 3];
 numbers[10] = 11;
 console.log(numbers);
@@ -420,7 +433,7 @@ C: [1, 2, 3, 7 x empty, 11]
 D: SyntaxError
 
 // < --------------Question 29----------------->
-33
+What is the output ?
 const person = { name: 'Lydia' };
 
 function sayHi(age) {
@@ -435,7 +448,7 @@ C: Lydia is 21 Lydia is 21
 D: Lydia is 21 function
 
 // < --------------Question 30----------------->
-
+What is the output ?
 var num = 8;
 var num = 10;
 
