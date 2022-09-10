@@ -71,6 +71,7 @@ function index() {
               password,
               downloadURL,
               uid: userInfo.user.uid,
+              posts:[],
             };
                             // db,collection name, document name
             await setDoc(doc(db, "users", userInfo.user.uid), userData);

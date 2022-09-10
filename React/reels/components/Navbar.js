@@ -12,18 +12,21 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import insta from '../assets/instagram.jpeg'
-import Image from 'next/image'
+import insta from "../assets/instagram.jpeg";
+import Image from "next/image";
 import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
 import { AuthContext } from "../context/auth";
 import { useRouter } from "next/router";
+const pages = ["Products", "Pricing", "Blog"];
+const settings = ["Profile", "Logout"];
 
-const ResponsiveAppBar = ({userData}) => {
+const ResponsiveAppBar = ({ userData }) => {
+  const router = useRouter();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
   const { logout } = React.useContext(AuthContext);
-  const router = useRouter();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -40,9 +43,12 @@ const ResponsiveAppBar = ({userData}) => {
   };
 
   const handleLogout = async () => {
+    console.log("logout called");
     await logout();
-    router.push('/login');
-  }
+    console.log("logout after");
+    router.push("/login");
+  };
+
   return (
     <AppBar position="static" className="navbar">
       <Container maxWidth="xl">
@@ -84,7 +90,7 @@ const ResponsiveAppBar = ({userData}) => {
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
                   alt="Remy Sharp"
-                  src={userData.downloadURL}
+                  src={userData?.downloadURL}
                   sx={{ margin: "0.5rem" }}
                 />
               </IconButton>
@@ -108,10 +114,12 @@ const ResponsiveAppBar = ({userData}) => {
               <MenuItem onClick={handleCloseUserMenu}>
                 <Typography textAlign="center">Profile</Typography>
               </MenuItem>
-              <MenuItem onClick={() => {
-                handleLogout()
-                handleCloseUserMenu()
-              }}>
+              <MenuItem
+                onClick={() => {
+                  handleLogout();
+                  handleCloseUserMenu();
+                }}
+              >
                 <Typography textAlign="center">Logout</Typography>
               </MenuItem>
             </Menu>
