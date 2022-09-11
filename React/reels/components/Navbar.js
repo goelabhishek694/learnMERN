@@ -18,6 +18,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
 import { AuthContext } from "../context/auth";
 import { useRouter } from "next/router";
+import Link from "next/link";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Logout"];
 
@@ -112,7 +113,9 @@ const ResponsiveAppBar = ({ userData }) => {
               onClose={handleCloseUserMenu}
             >
               <MenuItem onClick={handleCloseUserMenu}>
-                <Typography textAlign="center">Profile</Typography>
+                <Link href='/profile'>
+                  <Typography textAlign="center">Profile</Typography>
+                </Link>
               </MenuItem>
               <MenuItem
                 onClick={() => {

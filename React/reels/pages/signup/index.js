@@ -23,11 +23,11 @@ function index() {
   const router = useRouter();
   const { signup, user } = useContext(AuthContext);
 
-  // useEffect(() => {
-  //   if (user) {
-  //     router.push("/");
-  //   }
-  // }, [user]);
+  useEffect(() => {
+    if (user) {
+      router.push("/");
+    }
+  }, [user]);
 
   let handleClick = async() => {
     console.log(email);
