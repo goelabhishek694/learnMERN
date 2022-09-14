@@ -93,8 +93,16 @@
 }
 
 .video-modal{
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
     width:50%;
+}
+
+.video-modal>video{
+    height: 100%;
+    width: 100%;
 }
 
 .comments-modal{
@@ -102,6 +110,19 @@
     width:50%;
 }
 
+.post-like2{
+    /* width: 20%; */
+    display: flex;
+    
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 3rem; */
+
+}
+
+.card1{
+    height: 70vh;
+}
 
 
 
