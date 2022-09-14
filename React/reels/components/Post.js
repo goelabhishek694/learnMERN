@@ -15,7 +15,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardActions } from "@mui/material";
-
+import DisplayComments from './DisplayComments'
 import Comment from './Comment';
 
 function Post({ postData, userData }) {
@@ -91,7 +91,9 @@ function Post({ postData, userData }) {
                 <video autoPlay controls muted src={postData.postURL} />
               </div>
               <div className="comments-modal">
-                <Card className="card1"></Card>
+                <Card className="card1">
+                  <DisplayComments postData={postData} />
+                </Card>
                 <Card className="card2">
                   <Typography
                     sx={{
