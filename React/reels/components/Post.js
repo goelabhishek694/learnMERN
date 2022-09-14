@@ -19,7 +19,7 @@ import { CardActionArea, CardActions } from "@mui/material";
 import Comment from './Comment';
 
 function Post({ postData, userData }) {
-  // console.log("123456",postData);
+  console.log("123456", userData);
   const [like, setLike] = useState(false);
   // heart red -> jab logged in user ne like kia hta h
   const [open, setOpen] = React.useState(false);
@@ -110,7 +110,7 @@ function Post({ postData, userData }) {
                       style={like ? { color: "red" } : { color: "black" }}
                       onClick={handleLike}
                     />
-                    <Comment />
+                    <Comment userData={userData} postData={postData} />
                   </div>
                 </Card>
               </div>

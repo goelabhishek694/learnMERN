@@ -39,9 +39,9 @@ function Feed() {
       <Navbar userData={userData} />
       <Upload userData={userData} />
       <div className="videos-container">
-        {
-          posts.map((post) => <Post postData={post} userData = { user } />)
-        }
+        {posts.map((post) => (
+          <Post postData={post} userData={userData} />
+        ))}
       </div>
     </div>
   );
