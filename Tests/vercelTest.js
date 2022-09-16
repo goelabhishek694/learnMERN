@@ -403,4 +403,32 @@ function getName(name) {
 
 
 
+// i/p->arr = [1, 5, 0, 0, 3, 0, 8, 0, 9]
+// o/p->arr=[1,5,3,8,9,0,0,0,0]
+
+newArr = arr.filter( x => x > 0)
+zeroes = Array(arr.length - newArr.length).fill(0)
+newArr = newArr.concat(zeroes)
+
+// dsa
+// 1 -> brute force. tc->O(n) sc->O(n);
+// 2 -> two pointer approach tc->O(n);
+
+// it shoudl work 
+// then syntax 
+// then optimize 
+
+// longest substring unique char  leetcode 3 
+// str="babdcad"
+// ans="bdca"
+
+// generate all substrings of str 
+// loop check ki uske car unique ? if unique length ? 
+
+//hashSet
+
+// two sum  leetcode 2 ,1 
+//3 sum and 4 sum 
+
+
 
