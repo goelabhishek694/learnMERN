@@ -6,14 +6,18 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 function DisplayComments({ postData }) {
   const [allComments, setAllComments] = useState(null);
-  useEffect(async () => {
+  useEffect( () => {
+    getComments();
+  }, [postData]);
+
+  function getComments() {
     let tempArray = [];
     postData.comments.map(async (commentId) => {
       const docSnap = await getDoc(doc(db, "comments", commentId));
       tempArray.push(docSnap.data());
+      setAllComments(tempArray);
     });
-    setAllComments(tempArray);
-  }, [postData]);
+  }
   return (
     <div>
       {allComments == null ? (
@@ -22,10 +26,14 @@ function DisplayComments({ postData }) {
         <>
           {allComments.map((commentObj) => {
             return (
-              <div>
+              <div style={{ display: "flex" }}>
                 <Avatar src={commentObj.userDP} />
                 <p>
-                  <span>{commentObj.userName}</span>
+                  <span style={{ fontWeight: "bold" }}>
+                    &nbsp;
+                    {commentObj.userName}
+                  </span>
+                  &nbsp;&nbsp;
                   {commentObj.text}
                 </p>
               </div>
@@ -38,3 +46,9 @@ function DisplayComments({ postData }) {
 }
 
 export default DisplayComments;
+
+
+// like -> 1point 
+// comment -> 2 points
+
+// ts-> like+CompositionEvent
