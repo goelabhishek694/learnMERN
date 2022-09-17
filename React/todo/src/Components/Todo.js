@@ -1,124 +1,72 @@
-// //rcc -> react class component
-// import React, { Component } from 'react'
+//rcc -> react class component
+import React, { Component } from 'react'
 
-// export default class Todo extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       tasks: [
-//         { id: 1, task: "Revise JS" },
-//         { id: 2, task: "Revise DSA Level-1" },
-//       ],
-//       curTask: "",
-//     };
-//   }
-
-//   handleChange = (e) => {
-//     console.log(e.target.value);
-//     this.setState({
-//       curTask: e.target.value,
-//     });
-//   };
-
-//   handleSubmit = () => {
-//     this.setState({
-//       tasks: [
-//         ...this.state.tasks,
-//         { task: this.state.curTask, id: this.state.tasks.length + 1 },
-//       ],
-//       curTask: "",
-//     });
-//   };
-
-//   handleDeleteTasks = (id) => {
-//     // let narr = [];
-//     let narr = this.state.tasks.filter((taskObj)=>{
-//       return taskObj.id != id;
-//     });
-//     this.setState({
-//       tasks: [...narr],
-//     });
-//   };
-
-//   render() {
-//     console.log("render method is called");
-//     return (
-//       //jsx starts
-//       // <div>Todo</div>
-//       <div>
-//         <input
-//           type="text"
-//           value={this.state.curTask}
-//           onChange={this.handleChange}
-//         />
-//         <button onClick={this.handleSubmit}>Submit</button>
-
-//         {
-//           // use when need to write JS in jsx
-//           this.state.tasks.map((taskObj)=>{
-//             return (
-//               <li key={taskObj.id}>
-//                 <p>{taskObj.task}</p>
-//                 <button onClick={() => this.handleDeleteTasks(taskObj.id)}>
-//                   Delete
-//                 </button>
-//               </li>
-//             );
-//           })
-//         }
-//       </div>
-//     );
-//   }
-// }
-import React from "react";
-import { useEffect } from "react";
-function Todo() {
-
-  const callback = (entries) => {
-    entries.forEach((entry) => {
-      let ele = entry.target.childNodes[0];
-      console.log(ele);
-      ele.play().then(() => {
-        if (!ele.paused && !entry.isIntersecting) {
-          console.log("123",entry.isIntersecting);
-          ele.pause();
-        }
-      })
-    })
+export default class Todo extends Component {
+  constructor() {
+    super();
+    this.state = {
+      tasks: [
+        { id: 1, task: "Revise JS" },
+        { id: 2, task: "Revise DSA Level-1" },
+      ],
+      curTask: "",
+    };
   }
-  let options = {
-    // root: document.querySelector("#scrollArea"),
-    // rootMargin: "0px",
-    threshold: 0.6
+
+  handleChange = (e) => {
+    console.log(e.target.value);
+    this.setState({
+      curTask: e.target.value,
+    });
   };
 
-  let observer = new IntersectionObserver(callback, options);
-  useEffect(() => {
-    const elements = document.querySelectorAll(".videos");
-    elements.forEach((element) => { observer.observe(element) });
-  },[])
-  return (
-    <div className="video-container">
-      <div className="videos">
-        <video
-          src="https://firebasestorage.googleapis.com/v0/b/reels-839c5.appspot.com/o/posts%2Fa7cfed8e-8193-430d-909a-e10e64de47a8%2Fstream%20(2).mp4?alt=media&token=85920cf2-9f35-4bb6-8b12-f628d418e93b"
-          muted
-        />
-      </div>
-      <div className="videos">
-        <video
-          src="https://firebasestorage.googleapis.com/v0/b/reels-839c5.appspot.com/o/posts%2Fa7cfed8e-8193-430d-909a-e10e64de47a8%2Fstream%20(2).mp4?alt=media&token=85920cf2-9f35-4bb6-8b12-f628d418e93b"
-          muted
-        />
-      </div>
-      <div className="videos">
-        <video
-          src="https://firebasestorage.googleapis.com/v0/b/reels-839c5.appspot.com/o/posts%2Fa0cec983-0c29-48a8-bdcd-e54d5e577405%2Fa0ZOwXX_460svvp9.webm?alt=media&token=02f2d8fb-b77a-48b9-827c-fadcfe9b32d3"
-          
-        />
-      </div>
-    </div>
-  );
-}
+  handleSubmit = () => {
+    this.setState({
+      tasks: [
+        ...this.state.tasks,
+        { task: this.state.curTask, id: this.state.tasks.length + 1 },
+      ],
+      curTask: "",
+    });
+  };
 
-export default Todo;
+  handleDeleteTasks = (id) => {
+    // let narr = [];
+    let narr = this.state.tasks.filter((taskObj)=>{
+      return taskObj.id != id;
+    });
+    this.setState({
+      tasks: [...narr],
+    });
+  };
+
+  render() {
+    console.log("render method is called");
+    return (
+      //jsx starts
+      // <div>Todo</div>
+      <div>
+        <input
+          type="text"
+          value={this.state.curTask}
+          onChange={this.handleChange}
+        />
+        <button onClick={this.handleSubmit}>Submit</button>
+
+        {
+          // use when need to write JS in jsx
+          this.state.tasks.map((taskObj)=>{
+            return (
+              <li key={taskObj.id}>
+                <p>{taskObj.task}</p>
+                <button onClick={() => this.handleDeleteTasks(taskObj.id)}>
+                  Delete
+                </button>
+              </li>
+            );
+          })
+        }
+      </div>
+    );
+  }
+}
