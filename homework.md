@@ -108,3 +108,7 @@ https://stackoverflow.com/questions/29660381/backticks-calling-a-function-in-jav
 10/09/2022
 
 https://beta.reactjs.org/learn
+
+17/9/22
+
+https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/
