@@ -1,0 +1,96 @@
+.container-div
+{
+    min-height: 91vh;
+    background-color: #dfe6e9;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;  
+}
+.items
+{
+    flex-grow: 0;
+    flex-basis: 70%;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: white;
+    height: fit-content;
+    
+}
+.details-c
+{
+    flex-grow: 0;
+    flex-basis: 25%;
+    
+}
+.details{
+    background-color: white;
+    margin-top: 20%;
+    border-radius: 5%;
+}
+.checkout
+{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8%;
+}
+.coupon
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.smsg
+{
+    text-align: center;
+    margin-bottom: 6%;
+    color: #2ecc71;
+}
+.fmsg
+{
+    text-align: center;
+    margin-bottom: 6%;
+    color: #c0392b;
+}
+
+.revert
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7%;
+    margin-top: 5%;
+}
+
+@media only screen and (max-width: 700px) {
+    .container-div
+    {
+        display: block;
+    }
+    .details{
+        margin-top: 2%;
+        width: 65%;
+        margin-left: 19%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+      .itemContainer
+      {
+          display: block !important;
+      }
+      .imgc
+      {
+        display: flex;
+        justify-content: center;
+      }
+      .imgc img
+      { 
+          width: 60%;
+      }
+      .pc
+      {
+          margin-bottom: 5%;
+      }
+  }
