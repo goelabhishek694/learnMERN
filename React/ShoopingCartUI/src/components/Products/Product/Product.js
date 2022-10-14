@@ -32,7 +32,7 @@ function Product2({ product, addToCart, loadCurrentItem }) {
     const classes = useStyles();
     const handleOnClick = ()=>{
       loadCurrentItem(product);
-      // history.push(`/product/${product.id}`)
+      history.push(`/product/${product.id}`)
       // history.push({
       //   pathname:`/product/${product.id}`,
       //   state: product
