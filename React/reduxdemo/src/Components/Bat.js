@@ -26,5 +26,5 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-
+// on calling connect function , it returns us mstp and mdtp function with state and dispatch respectively. which when further called with components , gives them props 
 export default connect(mapStateToProps, mapDispatchToProps)(Bat);

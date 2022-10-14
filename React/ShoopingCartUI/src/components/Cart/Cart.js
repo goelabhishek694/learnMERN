@@ -7,18 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import {coupons} from '../../constants/coupons';
 import speaker from '../Products/speaker.jpg'
 
-function Cart1({cart=[]}) {
-    cart =[{
-      id: 2,
-      title: "Bluetooth Speaker",
-      description:
-          `With the Bluetooth speaker, you can enjoy motivational, dance, or instrumental music whenever you want. 
-        It ensures an immersive listening experience with its 52 mm full-range driver so that you can stay entertained
-         wherever you are. With an IPX7 rating, it ensures water resistance so that you can listen to music by
-          the poolside without a worry in the world.`,
-      price: 999.0,
-      image:speaker,
-    }]  
+function Cart1({cart=[]}) { 
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, setTotalItems] = useState(0);
     const [coupon,setCoupon] =useState('');
@@ -148,4 +137,10 @@ function Cart1({cart=[]}) {
     )
 }
 
-export default Cart1;
+const mapStateToProps = (state) => {
+  return {
+    cart:state.cart
+  }
+}
+
+export default connect(mapStateToProps)(Cart1)

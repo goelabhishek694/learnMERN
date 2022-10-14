@@ -86,4 +86,4 @@ const mapDispatchToProps = (dispatch) => {
     addToCart:(id)=>dispatch({type:actionTypes.ADD_TO_CART, payload:{id:id}})
   };
 }
-export default connect(null,mapDispatchToProps)(Product2);
+export default connect(null, mapDispatchToProps)(Product2);
