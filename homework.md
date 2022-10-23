@@ -112,3 +112,9 @@ https://beta.reactjs.org/learn
 17/9/22
 
 https://www.netlify.com/blog/2020/11/30/how-to-deploy-next.js-sites-to-netlify/
+
+23/10/22
+
+https://daveceddia.com/what-is-a-thunk/
+
+https://read.reduxbook.com/markdown/part1/04-action-creators.html
