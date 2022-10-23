@@ -1,0 +1,105 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" baseProfile="full" width="614" height="858" viewBox="45 20 624 858" style="margin:0 auto; __background:url(img/svg-4.jpg)  no-repeat 0 0;">
+	<defs>
+		<style>
+			.h1{font-family:"Arial"; font-size:35px; fill:#6ca8b9; font-weight:bold; ____fill:red}
+			.p2 {font-family:"Arial"; font-size:10px; fill:#333; ____fill:red}
+			.p3 {font-family:"Arial"; font-size:9px; fill:#333; ____fill:red}
+			.p2b {font-family:"Arial"; font-size:11px; font-weight:600; fill:#333;____fill:red}
+			.h2 {font-family:"Arial"; font-size:12px; fill:#000; font-weight:600; ____fill:red}
+			.subheding {font-family:"Arial"; font-size:10px; fill:rgba(0, 0, 0, 0.66); font-weight:600; ____fill:red}
+			.li-disc {fill:#333; ____fill:red}
+			.text-cap {font-size:24px; fill: #fff;font-family:"Arial";}
+			.line {stroke:#999;___stroke:#090;}
+		</style>
+	</defs>
+
+	<text x="92" y="32" class="h1">
+		<tspan x="244" y="84">Stella Walker</tspan>
+	</text>
+
+	<text x="9" y="92" class="p3">
+		<tspan x="256" y="114">jwalker@live.com | 508-278-2542 | 508-278-2542</tspan>
+		<tspan x="274" y="130">24Armor Lane, North Easton,Ma 02356</tspan>
+	</text>
+
+	<text x="273" y="174" class="h2">PROFESSIONAL SUMMARY</text>
+	<line xmlns="http://www.w3.org/2000/svg" x1="94" y1="190" x2="614" y2="190" class="line"/>
+
+	<text x="96" y="212" class="p2">Successful sales professional with 10+ years experience in large-scale food and retail environments. Implement cost</text>	
+	<text x="96" y="232" class="p2">control meameasures to ensure operations remain within company targets. Maximize bottom-line performance through</text>
+	<text x="96" y="250" class="p2">PL, merchandising, staff management, loss control and inventory management. Successful sales professional with</text>
+	<text x="96" y="272" class="p2">10+ years experience in large-scale food-and retail environments. Implement cost control measures to ensure opera-</text>
+	<text x="96" y="290" class="p2">tions remain targets</text>
+
+	<text x="328" y="332" class="h2">SKILLS</text>
+	<line xmlns="http://www.w3.org/2000/svg" x1="94" y1="342" x2="614" y2="342" class="line"/>
+
+	<circle cx="98" cy="362" r="1"  class="li-disc"></circle>			
+	<circle cx="98" cy="382" r="1" class="li-disc"></circle>			
+	<circle cx="98" cy="402" r="1" class="li-disc"></circle>
+	<circle cx="98" cy="422" r="1" class="li-disc"></circle>
+
+	<text x="108" y="365" class="p2">Executive team leadership</text>
+	<text x="108" y="385" class="p2">Inventory report generation</text>
+	<text x="108" y="405" class="p2">Client/Vendor relations</text>
+	<text x="108" y="425" class="p2">Market analysis</text>
+
+	<circle cx="300" cy="362" r="1"  class="li-disc"></circle>			
+	<circle cx="300" cy="382" r="1" class="li-disc"></circle>			
+	<circle cx="300" cy="402" r="1" class="li-disc"></circle>
+	<circle cx="300" cy="422" r="1" class="li-disc"></circle>
+
+	<text x="310" y="365" class="p2">Executive team leadership</text>
+	<text x="310" y="385" class="p2">Inventory report generation</text>
+	<text x="310" y="405" class="p2">Client/Vendor relations</text>
+	<text x="310" y="425" class="p2">Market analysis</text>
+
+
+	<circle cx="492" cy="362" r="1"  class="li-disc"></circle>			
+	<circle cx="492" cy="382" r="1" class="li-disc"></circle>			
+	<circle cx="492" cy="402" r="1" class="li-disc"></circle>
+	<circle cx="492" cy="422" r="1" class="li-disc"></circle>
+
+	<text x="502" y="365" class="p2">Executive team leadership</text>
+	<text x="502" y="385" class="p2">Inventory report generation</text>
+	<text x="502" y="405" class="p2">Client/Vendor relations</text>
+	<text x="502" y="425" class="p2">Market analysis</text>
+
+
+	<text x="316" y="485" class="h2">EXPERIENCE</text>
+	<line xmlns="http://www.w3.org/2000/svg" x1="94" y1="501" x2="614" y2="501" class="line"/>
+
+	<text x="96" y="530" class="subheding">District Manager</text>
+	<text x="96" y="550" class="p3">Verizon Wireless | August 2011 - September 2012</text>
+
+	<circle cx="98" cy="570" r="1"  class="li-disc"></circle>			
+	<circle cx="98" cy="590" r="1" class="li-disc"></circle>			
+	<circle cx="98" cy="610" r="1" class="li-disc"></circle>
+	<circle cx="98" cy="630" r="1" class="li-disc"></circle>
+
+	<text x="96" y="610" class="p2">
+		<tspan x="108" y="573">Directed recruitment/training/staff development initiatives.</tspan>
+		<tspan x="108" y="593">Successfully increased employee retention with a positive work environment.</tspan>
+		<tspan x="108" y="613">Administered daily operations to ensure policies were adhered to by sales staff.</tspan>
+		<tspan x="108" y="633">Cultivated strong business relationships with customers to drive business</tspan>
+	</text>
+
+	<text x="96" y="668" class="subheding">District Manager</text>
+	<text x="96" y="688" class="p3">Verizon Wireless | August 2011 - September 2012</text>
+
+	<circle cx="98" cy="713" r="1"  class="li-disc"></circle>			
+	<circle cx="98" cy="732" r="1" class="li-disc"></circle>			
+
+	<text x="96" y="610" class="p2">
+		<tspan x="108" y="715">Directed recruitment/training/staff development initiatives.</tspan>
+		<tspan x="108" y="735">Successfully increased employee retention with a positive work environment.</tspan>
+	</text>
+
+	<text x="320" y="790" class="h2">EDUCATION</text>
+	<line xmlns="http://www.w3.org/2000/svg" x1="94" y1="806" x2="614" y2="806" class="line"/>
+
+	<text x="96" y="835" class="subheding">Bachelor of Operational Arts</text>
+	<text x="96" y="855" class="p3">San Francisco City College, San Francisco | August 2011</text>
+
+</svg>

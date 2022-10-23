@@ -1,0 +1,112 @@
+<?xml version="1.0" standalone="no"?>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="664" height="858" viewBox="0 20 654 858" style="margin:0 auto; __background:url(img/svg-3.jpg) no-repeat 0 0;">
+	<defs>
+		<style>
+			.h1{font-family:"Arial"; font-size:32px; letter-spacing: 1px; fill:#000; font-weight:900; ____fill:red}
+			.p2 {font-family:"Arial"; font-size:11px; fill:#797979; word-spacing: 2px;____fill:red}
+			.p3 {font-family:"Arial"; font-size:11px; fill:#797979; word-spacing: 2px; ____fill:red}
+			.p2b {font-family:"Arial"; font-size:11px; font-weight:600; fill:#000;____fill:red}
+			.h2 {font-family:"Arial"; font-size:12.5px; fill:#000; font-weight:600; ____fill:red}
+			.subheding {font-family:"Arial"; font-size:11px; fill:#333; font-weight:600; ____fill:red}
+			.li-disc {fill:#333; ____fill:red}
+			.text-cap {font-size:24px; fill: #fff;font-family:"Arial";}
+			.line{stroke:#fff;___stroke:#090;}
+		</style>
+	</defs>
+
+	<text x="20" y="90" class="h1">
+		<tspan x="40" y="96"> Stella Walker</tspan>
+	</text>
+
+	<text x="9" y="92" class="p3">
+		<tspan x="38" y="120"> 699-812-1342  |  jwalker@gmail.com  |  24 Armor Lane, North Easton, MA 20013</tspan>
+	</text>
+
+	<text x="38" y="170" class="h2">PROFESSIONAL SUMMARY</text>	
+
+	<text x="38" y="196" class="p2">Successful sales professional with 10+ years experience in large-scale food and retail environments. Implement</text>	
+	<text x="38" y="216" class="p2">cost control measures to ensure operations remain within company targets. Maximize bottom-line performance</text>
+	<text x="38" y="240" class="p2">through P L, merchandising, staff management, loss control and inventory management. Successful sales profes-</text>
+	<text x="38" y="260" class="p2">sional with 10+ years experience in large-scale food and retail environments. Implement cost control measures to</text>
+	<text x="38" y="284" class="p2">ensure operations remain targets</text>
+
+	<text x="38" y="326" class="h2">SKILLS</text>
+
+	<circle cx="42" cy="348" r="1.5"  class="li-disc"></circle>			
+	<circle cx="42" cy="370" r="1.5" class="li-disc"></circle>			
+	<circle cx="42" cy="396" r="1.5" class="li-disc"></circle>
+	<circle cx="42" cy="418" r="1.5" class="li-disc"></circle>
+
+	<text x="50" y="352" class="p2">Executive team leadership</text>
+	<text x="50" y="376" class="p2">Inventory report generation</text>
+	<text x="50" y="398" class="p2">Client/Vendor relations</text>
+	<text x="50" y="420" class="p2">Market analysis</text>
+
+	<circle cx="260" cy="348" r="1.5"  class="li-disc"></circle>			
+	<circle cx="260" cy="370" r="1.5" class="li-disc"></circle>			
+	<circle cx="260" cy="396" r="1.5" class="li-disc"></circle>
+	<circle cx="260" cy="418" r="1.5" class="li-disc"></circle>
+
+	<text x="272" y="352" class="p2">Executive team leadership</text>
+	<text x="272" y="376" class="p2">Inventory report generation</text>
+	<text x="272" y="398" class="p2">Client/Vendor relations</text>
+	<text x="272" y="420" class="p2">Market analysis</text>
+
+
+	<circle cx="476" cy="348" r="1.5"  class="li-disc"></circle>			
+	<circle cx="476" cy="370" r="1.5" class="li-disc"></circle>			
+	<circle cx="476" cy="396" r="1.5" class="li-disc"></circle>
+	<circle cx="476" cy="418" r="1.5" class="li-disc"></circle>
+
+	<text x="486" y="352" class="p2">Executive team leadership</text>
+	<text x="486" y="376" class="p2">Inventory report generation</text>
+	<text x="486" y="398" class="p2">Client/Vendor relations</text>
+	<text x="486" y="420" class="p2">Market analysis</text>
+
+	<text x="38" y="468" class="h2">EXPERIENCE</text>
+	<text x="40" y="492" class="subheding">District Manager</text>
+	<text x="40" y="506" class="subheding">Verizon Wireless, 2001-2005 </text>
+	
+	<g  transform="translate(0 14)">
+		<circle cx="42" cy="516" r="1.5"  class="li-disc"></circle>			
+		<circle cx="42" cy="536" r="1.5" class="li-disc"></circle>			
+		<circle cx="42" cy="560" r="1.5" class="li-disc"></circle>
+		<circle cx="42" cy="584" r="1.5" class="li-disc"></circle>
+
+		<text x="24" y="510" class="p2">
+			<tspan x="50" y="518">Directed recruitment/training/staff development initiatives.</tspan>
+			<tspan x="50" y="540">Successfully increased employee retention with a positive work environment.</tspan>
+			<tspan x="50" y="562">Administered daily operations to ensure policies were adhered to by sales staff.</tspan>
+			<tspan x="50" y="586">Cultivated strong business relationships with customers to drive business</tspan>
+		</text>
+	</g>
+
+	<text x="40" y="636" class="subheding">District Manager</text>
+	<text x="40" y="650" class="subheding">Verizon Wireless, 2006-2008 </text>
+
+	<g  transform="translate(0 28)">
+		<circle cx="42" cy="644" r="1.5"  class="li-disc"></circle>			
+		<circle cx="42" cy="668" r="1.5" class="li-disc"></circle>	
+
+		<text x="24" y="700" class="p2">
+			<tspan x="50" y="648">Directed recruitment/training/staff development initiatives.</tspan>
+			<tspan x="50" y="672">Successfully increased employee retention with a positive work environment.</tspan>
+		</text>
+	</g>
+
+	<!-- Education Section-->
+	<g  transform="translate(0 28)">
+		<text x="38" y="724" class="h2">EDUCATION</text>
+
+		<text x="40" y="748" class="subheding">Bachelor of Operational Arts</text>
+		<text x="40" y="768" class="subheding">San Francisco City College, San Francisco 2001</text>
+
+		<circle cx="42" cy="788" r="1.5" class="li-disc"></circle>
+		<text x="50" y="792" class="p3">Dean list 2011-2014</text>
+
+		<circle cx="42" cy="812" r="1.5" class="li-disc"></circle>
+		<text x="50" y="816" class="p3">Exchange student program: Italy</text>
+	</g>
+
+
+</svg>

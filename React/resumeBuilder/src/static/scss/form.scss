@@ -1,0 +1,119 @@
+
+.form-card {
+    width: 55%;
+
+    box-shadow: 0 2px 9px rgba(186, 186, 186, 0.5);
+}
+.form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.form-heading {
+    font-size: 3.5rem;
+}
+
+.input-group {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem
+}
+
+.input-group.full {
+    width: 94%;
+}
+
+.input-group label {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #597181;
+    margin-bottom: 4px
+}
+
+.input-group .effect {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px
+}
+
+.input-group .effect>span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #5ae4ce;
+    transform: scaleY(0);
+    transition: transform .15s ease-in-out;
+    transform-origin: center
+}
+
+.input-group .effect .icon {
+    display: block;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    height: 100%
+}
+
+.input-group .effect .icon svg {
+    width: 16px;
+    height: 16px;
+    color: rgba(52, 88, 218, .2)
+}
+
+.input-group .effect .icon svg.green {
+    color: #03ad03 !important
+}
+
+.input-group .effect input:focus+span {
+    transform: scaleY(1);
+    border: none;
+}
+
+.input-group .effect input:focus+span+.icon svg {
+    color: #5ae4ce
+}
+
+input {
+    outline: none !important;
+}
+
+.input-group input {
+    border: none;
+    background-color: #f2f5fa;
+    padding: 15px 1rem;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    color: #545d69;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+    border-left: 0 solid #3458da;
+    width: 100%
+}
+
+.input-group .error {
+    margin-top: 3px;
+    color: #ff4848;
+    font-size: .8rem
+}
+
+.input-group.iconned input {
+    padding-left: calc(1rem + 22px)
+}
+
+.form-buttons {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+
+}
+
+.form-buttons .btn {
+    margin: 20px 0px;
+}

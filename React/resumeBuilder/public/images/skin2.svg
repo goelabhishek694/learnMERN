@@ -1,0 +1,163 @@
+<?xml version="1.0" standalone="no"?>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="614" height="858" viewBox="-10 0 702 858" style="margin:0 auto; __background:url(img/svg-1.PNG) no-repeat 0 0;">
+	<defs>
+		<style>
+			.h1{font-family:"Arial"; font-size:35px; text fill:#000000; font-weight:bold; ____fill:red}
+			.p2 {font-family:"Arial"; font-size:10px; fill:#333; ____fill:red}
+			.p3 {font-family:"Arial"; font-size:10px; fill:#333; ____fill:red}
+			.p2b {font-family:"Arial"; font-size:11px; font-weight:600; fill:#333;____fill:red}
+			.h2 {font-family:"Arial"; font-size:11px; fill:#000; font-weight:600; ____fill:red}
+			.subheding {font-family:"Arial"; font-size:10px;text-fill:#f00; fill:rgba(0, 0, 0, 0.66); font-weight:600; ____fill:red}
+			.li-disc {fill:#333; ____fill:red}
+			.text-cap {font-size:24px; fill: #000;font-family:"Arial";}
+			.line{stroke:#000;___stroke:#090;}
+			.mute {fill:#fff;stroke: #000;stroke-width: 2px;}
+		</style>
+	</defs>
+
+	<rect width="68" height="68" class="mute" x="9" y="06"></rect>
+
+	<text x="62" y="92" class="text-icon">
+		<tspan x="20" y="34" class="text-cap">S</tspan>
+		<tspan x="50" y="64" class="text-cap">W</tspan>
+	</text>
+
+	<line xmlns="http://www.w3.org/2000/svg" x1="18" y1="66.5" x2="68" y2="16.5" class="line"/>
+
+	<text x="92" y="32" class="h1">
+		<tspan x="94" y="34">STELLA </tspan>
+		<tspan x="94" y="72">WALKER</tspan>
+	</text> 
+
+	<text x="410" y="72" class="p3">
+		<tspan x="472" y="35">24 Armor Lane, North Easton,Ma 02356</tspan>
+		<tspan x="472" y="50">(H) 508-278-2542 (C) 781-669-5989</tspan>
+		<tspan x="472" y="65">jwalker@live.com </tspan>
+	</text>
+	<rect width="94%" height="27" style="fill:#f6f6f6" x="9" y="124"></rect>
+	<text x="19" y="143" class="h2">PROFESSIONAL SUMMARY</text>	
+
+	<text x="19" y="172" class="p2">Successful sales professional with 10+ years experience in large-scale food and retail environments. Implement cost control mea</text>	
+	<text x="19" y="186" class="p2">measures to ensure operations remain within company targets. Maximize bottom-line performance through PL, merchandising, staff</text>
+	<text x="19" y="200" class="p2">management, loss control and inventory management. Successful sales professional with 10+ years experience in large-scale food-</text>
+	<text x="19" y="214" class="p2">and retail environments. Implement cost control measures to ensure operations remain within company targets . Maximize bot</text>
+	<text x="19" y="228" class="p2"> tom-line performance through P L. merchandising staff management loss control and inventory management.</text>
+
+	<rect width="94%" height="27" style="fill:#f6f6f6" x="9" y="252"></rect>
+	<text x="19" y="270" class="h2">SKILLS</text>
+
+	<circle cx="19" cy="295" r="1"  class="li-disc"></circle>			
+	<circle cx="19" cy="316" r="1" class="li-disc"></circle>			
+	<circle cx="19" cy="337" r="1" class="li-disc"></circle>
+	<circle cx="19" cy="357" r="1" class="li-disc"></circle>
+
+	<text x="26" y="299" class="p2">Executive team leadership</text>
+	<text x="26" y="320" class="p2">Inventory report generation</text>
+	<text x="26" y="340" class="p2">Client/Vendor relations</text>
+	<text x="26" y="360" class="p2">Market analysis</text>
+
+	<circle cx="217" cy="295" r="1"  class="li-disc"></circle>			
+	<circle cx="217" cy="316" r="1" class="li-disc"></circle>			
+	<circle cx="217" cy="337" r="1" class="li-disc"></circle>
+	<circle cx="217" cy="357" r="1" class="li-disc"></circle>
+
+	<text x="222" y="299" class="p2">Sales management</text>
+	<text x="222" y="320" class="p2">Staff training</text>
+	<text x="222" y="340" class="p2">Customer relations</text>
+	<text x="222" y="360" class="p2">Process Improvements</text>
+
+
+	<circle cx="392" cy="295" r="1"  class="li-disc"></circle>			
+	<circle cx="392" cy="316" r="1" class="li-disc"></circle>			
+	<circle cx="392" cy="337" r="1" class="li-disc"></circle>
+	<circle cx="392" cy="357" r="1" class="li-disc"></circle>
+
+	<text x="408" y="299" class="p2">Sales management</text>
+	<text x="408" y="320" class="p2">Staff training</text>
+	<text x="408" y="340" class="p2">Customer relations</text>
+	<text x="408" y="360" class="p2">Process Improvements</text>
+	<!--Core Qualification Section End-->
+
+	<!-- Exp First Section End -->
+	<rect width="94%" height="27" style="fill:#f6f6f6" x="9" y="386"></rect>
+	<text x="19" y="404" class="h2">EXPERIENCE</text>
+	
+	<text x="19" y="435" class="subheding">District Manager</text>
+	<text x="19" y="449" class="subheding">Verizon Wireless | San Francisco, CA</text>
+	<text x="562" y="435" class="subheding">August 2011-Current</text>
+	 
+	<g  transform="translate(0 15)">	
+		<circle cx="19" cy="450" r="1"  class="li-disc"></circle>			
+		<circle cx="19" cy="465" r="1" class="li-disc"></circle>			
+		<circle cx="19" cy="480" r="1" class="li-disc"></circle>
+		<circle cx="19" cy="495" r="1" class="li-disc"></circle>
+
+		<text x="24" y="380" class="p2">
+			<tspan x="26" y="454">Directed recruitment/training/staff development initiatives.</tspan>
+			<tspan x="26" y="469">Compute taxes owed and prepare tax returns, ensuring compliance with reporting.</tspan>
+			<tspan x="26" y="484">Administered daily operations to ensure policies were adhered to by sales staff.</tspan>
+			<tspan x="26" y="499">Cultivated strong business relationships with customers to drive business.</tspan>
+		</text>	
+	</g>	
+		
+ 
+	<text x="19" y="538" class="subheding">District Manager</text>
+	<text x="19" y="552" class="subheding">Verizon Wireless | San Francisco, CA</text>
+	<text x="593" y="538" class="subheding">Jun 2008-2011</text>
+
+	<g  transform="translate(0 30)">
+		<circle cx="19" cy="538" r="1"  class="li-disc"></circle>			
+		<circle cx="19" cy="553" r="1" class="li-disc"></circle>			
+		<circle cx="19" cy="568" r="1" class="li-disc"></circle>
+		<circle cx="19" cy="583" r="1" class="li-disc"></circle>
+
+		<text x="24" y="460" class="p2">
+			<tspan x="26" y="542">Directed recruitment/training/staff development initiatives.</tspan>
+			<tspan x="26" y="556">Compute taxes owed and prepare tax returns, ensuring compliance with reporting.</tspan>
+			<tspan x="26" y="572">Administered daily operations to ensure policies were adhered to by sales staff.</tspan>
+			<tspan x="26" y="586">Cultivated strong business relationships with customers to drive business.</tspan>
+		</text>
+	</g>
+
+	<text x="19" y="644" class="subheding">District Manager</text>
+	<text x="19" y="658" class="subheding">Verizon Wireless | San Francisco, CA</text>
+	<text x="579" y="644" class="subheding">August 2002-2007</text>
+
+	<g  transform="translate(0 45)">
+		<circle cx="19" cy="630" r="1"  class="li-disc"></circle>			
+		<circle cx="19" cy="645" r="1" class="li-disc"></circle>			
+		<circle cx="19" cy="660" r="1" class="li-disc"></circle>
+		<circle cx="19" cy="675" r="1" class="li-disc"></circle>
+
+		<text x="24" y="650" class="p2">
+			<tspan x="26" y="633">Directed recruitment/training/staff development initiatives.</tspan>
+			<tspan x="26" y="648">Compute taxes owed and prepare tax returns, ensuring compliance with reporting.</tspan>
+			<tspan x="26" y="663">Administered daily operations to ensure policies were adhered to by sales staff.</tspan>
+			<tspan x="26" y="678">Cultivated strong business relationships with customers to drive business.</tspan>
+		</text>	
+	</g>
+
+	<!-- Exp Second Section End -->
+	<!-- Education Section-->
+	<g  transform="translate(0 45)">
+		<rect width="94%" height="27" style="fill:#f6f6f6" x="9" y="700"></rect>
+		<text x="19" y="718" class="h2">EDUCATION</text>
+
+		<text x="19" y="648" class="p2">
+			<tspan x="19" y="747" class="subheding">Bachelor of Arts: Operational Managements</tspan>
+			<tspan x="19" y="763">San Francisco State University, San Francisco, CA</tspan>			
+		</text>
+		<text x="603" y="747" class="subheding">August 2011</text>
+		<text x="19" y="788" class="p2">
+			<tspan x="19" y="790" class="subheding">Bachelor of Arts: Operational Managements</tspan>
+			<tspan x="19" y="806">San Francisco State University, San Francisco, CA</tspan>			
+		</text>
+		<text x="615" y="790" class="subheding">July 2002</text>
+		<text x="19" y="828" class="p2">
+			<tspan x="19" y="833" class="subheding">Bachelor of Arts: Operational Managements</tspan>
+			<tspan x="19" y="848">San Francisco State University, San Francisco, CA</tspan>			
+		</text>
+		<text x="600" y="833" class="subheding">August 1998</text>
+	</g>
+
+</svg>

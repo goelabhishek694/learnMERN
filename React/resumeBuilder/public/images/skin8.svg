@@ -1,0 +1,126 @@
+<?xml version="1.0" standalone="no"?>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="614" height="858" viewBox="-10 0 702 858" style="margin:0 auto; __background:url(img/svg-1.PNG) no-repeat 0 0;">
+	<defs>
+		<style>
+			.h1{font-family:"Arial"; font-size:35px; text fill:#000000; font-weight:bold; ____fill:red}
+			.p2 {font-family:"Arial"; font-size:10px; fill:#333; ____fill:red}
+			.p3 {font-family:"Arial"; font-size:10px; fill:#333; ____fill:red}
+			.p2b {font-family:"Arial"; font-size:11px; font-weight:600; fill:#333;____fill:red}
+			.h2 {font-family:"Arial"; font-size:11px; fill:#000; font-weight:600; ____fill:red}
+			.subheding {font-family:"Arial"; font-size:10px; fill:rgba(0, 0, 0, 0.66); font-weight:600; ____fill:red}
+			.li-disc {fill:#333; ____fill:red}
+			.text-cap {font-size:24px; fill: #fff;font-family:"Arial";}
+			.line{stroke:#fff;___stroke:#090;}
+		</style>
+	</defs>
+
+	<rect width="68" height="68" style="fill:#000" x="9" y="06"></rect>
+
+	<text x="62" y="92" class="text-icon">
+		<tspan x="20" y="34" class="text-cap">S</tspan>
+		<tspan x="50" y="64" class="text-cap">W</tspan>
+	</text>
+
+	<line xmlns="http://www.w3.org/2000/svg" x1="18" y1="66.5" x2="68" y2="16.5" class="line"/>
+
+	<text x="92" y="32" class="h1">
+		<tspan x="94" y="34">STELLA</tspan>
+		<tspan x="94" y="72">WALKER</tspan>
+	</text>
+
+	<text x="9" y="92" class="p3">
+		<tspan x="9" y="94">3995 Emma Street, Huntsville, AL 35801, 256-520-3085, swalker@live.com</tspan>
+	</text>
+
+	<text x="9" y="144" class="h2">PROFESSIONAL SUMMARY</text>	
+
+	<text x="9" y="162" class="p2">Experienced Physicist with 7 years of applied research in astronomy and near-earth object tracking as part of  </text>	
+	<text x="9" y="176" class="p2">commercial space efforts. Excellent technologist with incessant curiosity and desire to discover new elements of  </text>
+	<text x="9" y="190" class="p2">planetary systems. Successful grant writer with excellent record of winning critical funding for further research. </text>
+	
+	<text x="9" y="249" class="h2">SKILLS</text>
+
+	<circle cx="9" cy="265" r="1"  class="li-disc"></circle>			
+	<circle cx="9" cy="280" r="1" class="li-disc"></circle>	
+
+	<text x="26" y="268" class="p2">COMSOL Multiphysics</text>
+	<text x="26" y="283" class="p2">LabVIEW</text>
+
+	<circle cx="207" cy="265" r="1"  class="li-disc"></circle>			
+	<circle cx="207" cy="280" r="1" class="li-disc"></circle>	
+
+	<text x="222" y="268" class="p2">MATLAB</text>
+	<text x="222" y="283" class="p2">Predictive analysis</text>
+
+
+	<circle cx="392" cy="265" r="1"  class="li-disc"></circle>			
+	<circle cx="392" cy="280" r="1" class="li-disc"></circle>	
+
+	<text x="408" y="268" class="p2">Spectral Dynamics STAR</text>
+	<text x="408" y="283" class="p2">Python</text>
+	<!--Core Qualification Section End-->
+
+	<text x="9" y="346" class="h2">EXPERIENCE</text>
+	<text x="9" y="366" class="subheding">Astronomer/physicist Programmer </text>
+	<text x="9" y="380" class="subheding">AeroD Industries | NASA Marshall Space Flight Center | Huntsville, AL </text>
+	<text x="565" y="366" class="subheding">February 2016 - Current</text>
+	<!-- Experience Section-->
+			
+	<circle cx="9" cy="394" r="1" class="li-disc"></circle>			
+	<circle cx="9" cy="408" r="1" class="li-disc"></circle>
+	<circle cx="9" cy="423" r="1" class="li-disc"></circle>
+	<circle cx="9" cy="437" r="1"  class="li-disc"></circle>
+
+	<text x="24" y="380" class="p2">
+		<tspan x="26" y="396">Assisted Meteoroid Environment Office staff in defining meteoroid environment and risk factors in relation to  spacecraft design. </tspan>
+		<tspan x="26" y="411">Delivered rapid analysis of skyfall events and analyzed instrument data collected on meteors, trajectories, origins and characteristics.</tspan>
+		<tspan x="26" y="426">Modeled meteor showers and summarized events for presentation to NASA and contracted commercial organizations.</tspan>
+		<tspan x="26" y="440">Applied skills in Python, C++, Mathematica and MATLAB to rapid modeling of events for analysis, investigation and reporting.</tspan>
+	</text>		
+		<!-- Exp First Section End -->
+
+	<text x="9" y="465" class="subheding">Staff Scientist </text>
+	<text x="9" y="479" class="subheding">The University of Arizona | Tucson, AZ </text>
+	<text x="560" y="465" class="subheding">May 2014 - February 2016</text>  
+
+	<circle cx="9" cy="491" r="1" class="li-disc"></circle>			
+	<circle cx="9" cy="505" r="1" class="li-disc"></circle>
+	<circle cx="9" cy="519" r="1" class="li-disc"></circle>
+	<circle cx="9" cy="532" r="1"  class="li-disc"></circle>	
+
+	<text x="24" y="460" class="p2">
+		<tspan x="26" y="494">Conceptualized and implemented improved data tracking and analysis methods for application to mapping of Kuyper Belt objects.</tspan>
+		<tspan x="26" y="509">Authored 23 winning grant applications to secure over $1.5M in funding across 5 years for progressive research into outer planetary system objects.</tspan>
+		<tspan x="26" y="522">Managed team of 3 graduate assistants and 4 undergraduate interns on variety of astrological research projects.</tspan>
+		<tspan x="26" y="536">Interpreted and recorded data gathered from multiple sources and evaluated results for anomalies.</tspan>
+	</text>
+
+	
+
+	<!-- Exp Second Section End -->
+	<!-- Education Section-->
+	<text x="9" y="610" class="h2">EDUCATION</text>
+
+	<text x="9" y="620" class="p2">
+		<tspan x="9" y="630">Master of Science – Astronomy</tspan>
+		<tspan x="9" y="645">University of California, Los Angeles, Los Angeles, CA</tspan>	
+		<tspan x="9" y="660">Thesis: Exploring Cosmic Micro Wavelengths using high resolution retrofit of camera at Roberts Heil Spectrograph</tspan>		
+	</text>
+	<text x="605" y="630" class="subheding">May  2016</text>
+	<text x="9" y="690" class="p2">
+		<tspan x="9" y="690">Bachelor of Science – Physics </tspan>
+		<tspan x="9" y="705">Massachusetts Institute of Technology, Cambridge, MA</tspan>			
+	</text>
+	<text x="618" y="690" class="subheding">May 2014</text>
+	
+
+	<text x="9" y="770" class="h2">AWARDS</text>
+
+	<text x="9" y="790" class="p2">
+		<tspan x="9" y="790">Rhea Seddon Special Service Award (2014) </tspan>
+		<tspan x="9" y="805">National Young Astronomer Award (2013) </tspan>	
+		<tspan x="9" y="820">Horkheimer/Smith Youth Service Award (2010)</tspan>		
+	</text>
+	
+
+</svg>
