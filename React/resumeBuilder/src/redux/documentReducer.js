@@ -7,12 +7,12 @@ const documentReducer = (state = initialState.document, action) => {
         return {
           ...state,
           id: action.payload.id,
-          skinCode: action.payload.skinCode,
+          skinCd: action.payload.skinCd,
         };
       case documentActions.UPDATE_SKIN:
         return {
           ...state,
-          skinCode: action.payload.skinCode,
+          skinCd: action.payload.skinCd,
         };
       default:
         return state;

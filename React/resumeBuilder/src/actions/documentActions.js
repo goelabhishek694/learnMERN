@@ -1,21 +1,21 @@
 import * as documentActions from './actions'
 import { v4 as uuidv4 } from 'uuid';
 
-export const setDocument = (skinCode) => {
+export const setDocument = (skinCd) => {
     return {
         type: documentActions.SET_SKIN,
         payload: {
             id:uuidv4(),
-            skinCode
+            skinCd
         }
     }
 }
 
-export const updateDocument = (skinCode) => {
+export const updateDocument = (skinCd) => {
   return {
-    type: documentActions.SET_SKIN,
+    type: documentActions.UPDATE_SKIN,
     payload: {
-      skinCode,
+      skinCd,
     },
   };
 };
