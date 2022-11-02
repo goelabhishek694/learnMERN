@@ -47,8 +47,8 @@ function Register(props) {
                     <div className="effect"><input type="password" name="password" value={password} onChange={handlePassword} /><span></span>
                     </div>
                   </div>
-                  {props.authMine?.ErrorMessage?.message ? <div className="input-group full">
-                    <span className="error-message" >{props.authMine?.ErrorMessage?.message}</span>
+                  {props.authMine?.error ? <div className="input-group full">
+                    <span className="error-message" >{props.authMine?.error}</span>
                   </div> : <></>}
                   <div className="form-buttons">
                     <button onClick={onSubmit} className="btn hvr-float-shadow" type='button'>Register</button>

@@ -44,9 +44,9 @@ export const register = (userData) => {
             dispatch(registerSuc())
         }).catch(err => {
             dispatch(registerFail(err))
-            // setTimeout(() => {
-            //     dispatch(removeError())
-            // },2000)
+            setTimeout(() => {
+                dispatch(removeError())
+            },2000)
         })
     }
 }
