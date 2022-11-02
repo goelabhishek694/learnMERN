@@ -1,9 +1,9 @@
 import React,{useEffect,useState} from "react";
 import update from 'immutability-helper';
-// import { connect } from "react-redux";
-// import {bindActionCreators} from 'redux';
-// import * as authActions from '../../actions/authActions';
-// import { isLoaded } from 'react-redux-firebase'
+import { connect } from "react-redux";
+import {bindActionCreators} from 'redux';
+import * as authActions from '../../actions/authActions';
+import { isLoaded } from 'react-redux-firebase'
 import { useHistory } from "react-router";
 
   function Login(props) {
@@ -22,11 +22,14 @@ setEmail(e.target.value);
 const handlePassword=(e)=>{
   setPassword(e.target.value);
 }
-    const onSubmit=()=>{
+    const onSubmit=async ()=>{
     
-      // let obj = {email:email,password:password}
-      // console.log(obj)
-      // props.signIn(obj)
+      let obj = {email:email,password:password}
+      console.log(obj)
+      await props.signIn(obj);
+      if(props.authMine.error==''){
+        history.push('/');
+      }
     }
 
 
@@ -49,8 +52,8 @@ const handlePassword=(e)=>{
                             <div className="effect"><input  type="password" name="password"  value={password || ''} onChange={handlePassword}/><span></span>
                             </div>
                         </div>
-                        {props.authMine?.ErrorMessage?.message?<div className="input-group full">
-                                <span className="error-message" >{props.authMine?.ErrorMessage?.message}</span> 
+                        {props.authMine?.error?<div className="input-group full">
+                                <span className="error-message" >{props.authMine.error}</span> 
                         </div> :<></>}  
                         <div className="form-buttons">
                             <button onClick={onSubmit} className="btn hvr-float-shadow" type='button'>Login</button>
@@ -67,9 +70,18 @@ const handlePassword=(e)=>{
     );
   }
 
-
+const mapStateToProps=(state)=>{
+  return{
+    authMine:state.auth
+  }
+}
+const mapDispatchToProps=(dispatch)=>{
+  return {
+    signIn:(userData)=>dispatch(authActions.signin(userData))
+  }
+}
 
  
 
 
-  export default Login
+  export default connect(mapStateToProps,mapDispatchToProps)(Login)

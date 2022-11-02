@@ -77,7 +77,7 @@ export const signin = (userData) => {
     dispatch(signinReq());
     const firebase = getFirebase();
       try {
-          const res = await firebase.auth().signInWithEmailAndPassword(userData.email, userData.passowrd);
+          const res = await firebase.auth().signInWithEmailAndPassword(userData.email, userData.password);
           //succ
           dispatch(signinSuc())
       }
