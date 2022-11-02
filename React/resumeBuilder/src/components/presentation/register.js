@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { isLoaded } from 'react-redux-firebase'
 import { connect } from "react-redux";
-// import * as authActions from '../../actions/authActions';
-import { register } from '../../actions/authActions'
+import * as authActions from '../../actions/authActions';
 import { useHistory } from "react-router";
 function Register(props) {
 
@@ -18,7 +17,12 @@ function Register(props) {
 
   const onSubmit = async () => {
 
-    await props.register({ email: email, password: password })
+    const res=await props.register({ email: email, password: password });
+  console.log('123',res);
+  console.log('456',props.auth);
+    if(props.auth.uid!=null){
+      history.push('/');
+    }
 
   }
 
@@ -40,7 +44,7 @@ function Register(props) {
                   </div>
 
                   <div className="input-group full"><label>Password</label>
-                    <div className="effect"><input type="password" name="password" value={password || ''} onChange={handlePassword} /><span></span>
+                    <div className="effect"><input type="password" name="password" value={password} onChange={handlePassword} /><span></span>
                     </div>
                   </div>
                   {props.authMine?.ErrorMessage?.message ? <div className="input-group full">
@@ -70,7 +74,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    register: (userData) => dispatch(register(userData))
+    register: (userData) => dispatch(authActions.register(userData))
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Register);

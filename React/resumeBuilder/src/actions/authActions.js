@@ -1,28 +1,28 @@
-import * as authActions from './actions'
+import * as actionTypes from './actionTypes'
 
 //sign up
 const registerReq = () => {
     return {
-        type:authActions.SIGN_UP_REQUEST
+        type:actionTypes.SIGN_UP_REQUEST
     }
 }
 
 const registerFail = (err) => {
   return {
-      type: authActions.SIGN_UP_FAILED,
+      type: actionTypes.SIGN_UP_FAILED,
       payload:err.message
   };
 };
 
 const registerSuc = () => {
   return {
-    type: authActions.SIGN_UP_SUCCESS,
+    type: actionTypes.SIGN_UP_SUCCESS,
   };
 };
 
 const removeError = () => {
     return {
-        type:authActions.REMOVE_ERROR
+        type:actionTypes.REMOVE_ERROR
     }
 }
 export const register = (userData) => {
@@ -31,20 +31,22 @@ export const register = (userData) => {
         dispatch(registerReq())
         const firebase = getFirebase();
         const firestore = getFirestore();
-        firebase.auth().createUserWithEmailAndPassword(userData.email, userData.passowrd).then(async (userCredentials) => {
-            const res = await firestore
-              .collection("users")
-                .doc(userCredentials.user.uid).set({
+        console.log('after firebase firestore');
+        firebase.auth().createUserWithEmailAndPassword(userData.email, userData.password).then(async (userCredentials) => {
+          console.log('user cred', userCredentials);
+            const res = await firestore.collection("users").doc(userCredentials.user.uid).set({
                     email: userData.email,
                     resumeIds:[]
                 })
+                console.log('after registering user');
             //success 
+
             dispatch(registerSuc())
         }).catch(err => {
             dispatch(registerFail(err))
-            setTimeout(() => {
-                dispatch(removeError())
-            },2000)
+            // setTimeout(() => {
+            //     dispatch(removeError())
+            // },2000)
         })
     }
 }
@@ -52,20 +54,20 @@ export const register = (userData) => {
 //sign in
 const signinReq = () => {
     return {
-        type:authActions.SIGN_IN_REQUEST
+        type:actionTypes.SIGN_IN_REQUEST
     }
 }
 
 const signinFail = (err) => {
   return {
-      type: authActions.SIGN_IN_FAILED,
+      type: actionTypes.SIGN_IN_FAILED,
       payload:err.message
   };
 };
 
 const signinSuc = () => {
   return {
-    type: authActions.SIGN_IN_SUCCESS,
+    type: actionTypes.SIGN_IN_SUCCESS,
   };
 };
 
@@ -90,14 +92,14 @@ export const signin = (userData) => {
 
 export const signout = () => {
   return async (dispatch, getState, { getFirebase }) => {
-    dispatch({type:authActions.SIGN_OUT_REQUEST});
+    dispatch({type:actionTypes.SIGN_OUT_REQUEST});
     const firebase = getFirebase();
     try {
       await firebase.auth().signOut();
       //succ
-      dispatch({type:authActions.SIGN_OUT_SUCCESS});
+      dispatch({type:actionTypes.SIGN_OUT_SUCCESS});
     } catch (err) {
-      dispatch({type:authActions.SIGN_OUT_FAILED,payload:err.message});
+      dispatch({type:actionTypes.SIGN_OUT_FAILED,payload:err.message});
       setTimeout(() => {
         dispatch(removeError());
       }, 2000);
