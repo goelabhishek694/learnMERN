@@ -1,4 +1,4 @@
-import * as documentActions from './actions'
+import * as documentActions from './actionTypes'
 import { v4 as uuidv4 } from 'uuid';
 
 export const setDocument = (skinCd) => {

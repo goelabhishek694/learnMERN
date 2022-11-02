@@ -1,4 +1,4 @@
-import * as documentActions from '../actions/actions'
+import * as documentActions from '../actions/actionTypes'
 import initialState from './initialState.json'
 
 const documentReducer = (state = initialState.document, action) => {

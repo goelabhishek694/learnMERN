@@ -1,4 +1,4 @@
-import * as educationActions from "./actions";
+import * as educationActions from "./actionTypes";
 
 export const setEducation = (education) => {
   return {

@@ -1,4 +1,4 @@
-import * as contactActions from '../actions/actions'
+import * as contactActions from '../actions/actionTypes'
 import initialState from '../redux/initialState.json'
 
 const contactReducer = (state = initialState.contact, action) => {

@@ -1,4 +1,4 @@
-import * as educationActions from '../actions/actions'
+import * as educationActions from '../actions/actionTypes'
 import initialState from './initialState.json'
 
 const educationReducer = (state = initialState.education, action) => {

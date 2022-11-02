@@ -1,4 +1,4 @@
-import * as authActions from "../actions/actions";
+import * as authActions from "../actions/actionTypes";
 import initialState from "./initialState.json";
 
 const authReducer = (state = initialState.auth, action) => {

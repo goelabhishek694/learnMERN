@@ -1,4 +1,4 @@
-import * as contactActions from './actions'
+import * as contactActions from './actionTypes'
 
 export const setContact = (contact) => {
     return {
