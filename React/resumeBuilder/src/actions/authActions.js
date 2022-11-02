@@ -27,6 +27,7 @@ const removeError = () => {
 }
 export const register = (userData) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
+      console.log("in register", userData)
         dispatch(registerReq())
         const firebase = getFirebase();
         const firestore = getFirestore();
@@ -89,14 +90,14 @@ export const signin = (userData) => {
 
 export const signout = () => {
   return async (dispatch, getState, { getFirebase }) => {
-    dispatch(signinReq());
+    dispatch({type:authActions.SIGN_OUT_REQUEST});
     const firebase = getFirebase();
     try {
       await firebase.auth().signOut();
       //succ
       dispatch({type:authActions.SIGN_OUT_SUCCESS});
     } catch (err) {
-      dispatch({type:authActions.SIGN_OUT_FAILED,payload:err});
+      dispatch({type:authActions.SIGN_OUT_FAILED,payload:err.message});
       setTimeout(() => {
         dispatch(removeError());
       }, 2000);

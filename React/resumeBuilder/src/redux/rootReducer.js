@@ -9,8 +9,8 @@ const rootReducer = combineReducers({
     document: documentReducer,
     contact: contactReducer,
     education: educationReducer,
-    firebase: firebaseReducer,
-    firestore: firestoreReducer,
+    firebase: firebaseReducer,  //auth
+    firestore: firestoreReducer, //user 
     auth:authReducer
 })
 
