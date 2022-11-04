@@ -7,7 +7,7 @@ import {useFirestore} from 'react-redux-firebase'
 function Finalize(props) {
   let educationSection = props.educationSection;
   let contactSection = props.contactSection;
-  let document = props.document;
+  let documentt = props.document;
   let firestore=useFirestore();
 let obj;
   const saveToDatabase = async () => {
@@ -15,10 +15,10 @@ let obj;
     user=user.data();
     console.log(user);
     if(user.resumeIds!=undefined){
-      obj={...user.resumeIds,[document.id]:{educationSection,contactSection,document}}
+      obj={...user.resumeIds,[documentt.id]:{educationSection,contactSection,documentt}}
     }
     else{
-      obj={[document.id]:{educationSection,contactSection,document}}
+      obj={[documentt.id]:{educationSection,contactSection,documentt}}
     }
 
     firestore.collection('users').doc(props.auth.uid).update({
@@ -26,8 +26,8 @@ let obj;
     })
   };
   const downloadResume = () => {
-    const input = document.getElementById("resumePreview");
     console.log(document);
+    const input = document.getElementById("resumePreview");
     html2canvas(input)
       .then((canvas) => {
         const imgData = canvas.toDataURL("image/png");

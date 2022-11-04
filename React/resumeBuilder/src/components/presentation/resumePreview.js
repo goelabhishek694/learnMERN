@@ -46,3 +46,10 @@ function ResumePreview(props){
         )
     }
 export default ResumePreview;
+
+
+
+//pseudo
+// return(
+//     skincd?1:<Template1.js></Template1.js>
+// )
