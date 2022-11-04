@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './static/scss/app.scss';
+import PrivateRoute from './components/presentation/PrivateRoute';
 import 'react-router-dom';
 import { Route,Switch } from 'react-router-dom';
 import Header from './components/presentation/header';
@@ -20,12 +21,12 @@ function App() {
      <Header></Header>
 
      <Switch>
-          <Route path="/education" component={Education}></Route>
-          <Route path="/contact" component={Contacts}></Route>
-          <Route path="/getting-started" component={GettingStarted}></Route>
-          <Route path="/resume-templates" component={GettingStarted}></Route>
-          <Route path="/about-us"     component={AboutUs}></Route>
-          <Route path="/finalize" component={Finalize}></Route>
+          <PrivateRoute path="/education" component={Education}></PrivateRoute>
+          <PrivateRoute path="/contact" component={Contacts}></PrivateRoute>
+          <PrivateRoute path="/getting-started" component={GettingStarted}></PrivateRoute>
+          <PrivateRoute path="/resume-templates" component={GettingStarted}></PrivateRoute>
+          <Route path="/about-us" component={AboutUs}></Route>
+          <PrivateRoute path="/finalize" component={Finalize}></PrivateRoute>
           <Route path="/login" component={Login}></Route>
           <Route path="/register" component={Register}></Route>             
           <Route path="/" component={LandingPage}></Route>
