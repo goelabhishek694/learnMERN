@@ -121,3 +121,8 @@ https://read.reduxbook.com/markdown/part1/04-action-creators.html
 
 4/11/22
 https://www.mugo.ca/Blog/7-benefits-of-using-SASS-over-conventional-CSS
+
+7/11/22
+https://www.interviewbit.com/react-interview-questions/
+https://zellwk.com/blog/async-await-in-loops/#:~:text=It%20cannot%20support%20async%20and,cannot%20use%20await%20in%20forEach%20.
+
